@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    ============================================================================
+    HALO.BD — DESIGN REFERENCE PREVIEW  (not the production site)
+    ----------------------------------------------------------------------------
+    Purpose: visualize the design system + homepage narrative (Brief §14) using
+    the SAME tokens/CSS/JS that ship for WordPress + Elementor:
+      /design-system/halo-tokens.css · /assets/css/halo-custom.css
+      /assets/js/halo-theme.js · /assets/js/halo.js
+    The production site is built from /elementor/templates/*.json — this file
+    is excluded from the WordPress build. Fonts load from Google Fonts CDN here
+    ONLY because this sandbox cannot download font binaries; production
+    self-hosts them (assets/fonts/README.md).
+    ============================================================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SINGLE-FILE PREVIEW — open in any browser, no server needed. -->
+  <title>Mehedi Hasan — Principal Product Designer in Dhaka</title>
+  <meta name="description" content="Mehedi Hasan is a Principal Product Designer based in Dhaka with 12+ years of experience designing digital products, user experiences, interfaces and design systems across AI, music, fintech, entertainment, telecom and more.">
+  <meta name="theme-color" content="#F6F6F3">
+  <meta property="og:title" content="Mehedi Hasan — Principal Product Designer in Dhaka">
+  <meta property="og:description" content="I design products, not just screens. 12+ years across AI, music, fintech, entertainment, telecom and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.halo.bd/">
+
+  <!-- No-flash theme boot (copy of BOOT block from assets/js/halo-theme.js) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("halo-theme");
+        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (systemDark ? "dark" : "light");
+        var root = document.documentElement;
+        root.setAttribute("data-theme", theme);
+        root.style.colorScheme = theme;
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Preview-only webfont pull (production: self-hosted per assets/fonts/README.md) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+
+  <style>
+/* ===== inlined: design-system/halo-tokens.css ===== */
+/* ==========================================================================
+   HALO.BD — Design Tokens
+   Mehedi Hasan · Principal Product Designer
+   --------------------------------------------------------------------------
+   Deliverable: Phase 2 (Design system), per Master Build Brief §9, §10, §29.
+
+   HOW TO USE (WordPress + Elementor):
+   1. Load this file BEFORE assets/css/halo-custom.css, site-wide
+      (child-theme enqueue, or a snippets plugin — see docs/05-qa-and-handoff.md).
+   2. Components NEVER reference raw hex values. They use the semantic
+      tokens below (--halo-bg, --halo-surface, --halo-text, --halo-text-muted,
+      --halo-border, --halo-accent, --halo-focus).
+   3. Light/dark theming is driven by [data-theme] on <html> and is set
+      before first paint by assets/js/halo-theme.js (no flash).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Palette primitives (PRIVATE — do not use in components)
+   Master Build Brief §9.
+   -------------------------------------------------------------------------- */
+:root {
+  --halo-c-black:      #0A0A0A;
+  --halo-c-slate:      #171A1D;
+  --halo-c-charcoal:   #25282B;
+  --halo-c-dark-gray:  #555A60;
+  --halo-c-gray:       #8A8F94;
+  --halo-c-light-gray: #E8E9EA;
+  --halo-c-off-white:  #F6F6F3;
+  --halo-c-white:      #FFFFFF;
+
+  /* Accent — [PLACEHOLDER — owner to confirm, Brief §9 "Accent color"].
+     Proposed: restrained cobalt. Measured contrast (WCAG):
+       #2545DB on #F6F6F3 = 6.57:1  (AAA for normal text)
+       #7D96FF on #0A0A0A = 7.24:1  (AAA for normal text) */
+  --halo-c-accent-light: #2545DB;
+  --halo-c-accent-dark:  #7D96FF;
+}
+
+/* --------------------------------------------------------------------------
+   2. Semantic tokens — LIGHT (default)
+   Muted text rule (Brief §9, measured): Dark Gray #555A60 in light mode
+   = 6.4:1 on Off White. Never reuse the same muted color across themes.
+   -------------------------------------------------------------------------- */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --halo-bg:            var(--halo-c-off-white);
+  --halo-surface:       var(--halo-c-white);
+  --halo-surface-2:     var(--halo-c-light-gray);
+  --halo-text:          var(--halo-c-black);
+  --halo-text-muted:    var(--halo-c-dark-gray);   /* 6.4:1 on bg */
+  --halo-border:        color-mix(in srgb, var(--halo-c-black) 12%, transparent);
+  --halo-border-strong: color-mix(in srgb, var(--halo-c-black) 24%, transparent);
+  --halo-accent:        var(--halo-c-accent-light);
+  --halo-accent-soft:   color-mix(in srgb, var(--halo-c-accent-light) 10%, transparent);
+  --halo-on-accent:     var(--halo-c-white);
+  --halo-focus:         var(--halo-c-accent-light);
+  --halo-scrim:         color-mix(in srgb, var(--halo-c-black) 55%, transparent);
+
+  --halo-shadow-sm: 0 1px 2px rgb(10 10 10 / 0.05);
+  --halo-shadow-md: 0 8px 24px -8px rgb(10 10 10 / 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   3. Semantic tokens — DARK
+   Muted text rule: Gray #8A8F94 in dark mode = 6.1:1 on Black.
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --halo-bg:            var(--halo-c-black);
+  --halo-surface:       var(--halo-c-slate);
+  --halo-surface-2:     var(--halo-c-charcoal);
+  --halo-text:          var(--halo-c-off-white);
+  --halo-text-muted:    var(--halo-c-gray);        /* 6.1:1 on bg */
+  --halo-border:        color-mix(in srgb, var(--halo-c-off-white) 14%, transparent);
+  --halo-border-strong: color-mix(in srgb, var(--halo-c-off-white) 28%, transparent);
+  --halo-accent:        var(--halo-c-accent-dark);
+  --halo-accent-soft:   color-mix(in srgb, var(--halo-c-accent-dark) 14%, transparent);
+  --halo-on-accent:     var(--halo-c-black);
+  --halo-focus:         var(--halo-c-accent-dark);
+  --halo-scrim:         color-mix(in srgb, var(--halo-c-black) 70%, transparent);
+
+  --halo-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
+  --halo-shadow-md: 0 8px 24px -8px rgb(0 0 0 / 0.6);
+}
+
+/* Honor the system theme only when no explicit choice is stored —
+   assets/js/halo-theme.js mirrors prefers-color-scheme into [data-theme]. */
+
+/* --------------------------------------------------------------------------
+   4. Spacing scale (px) — Brief §29
+   8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96 · 120 · 160
+   -------------------------------------------------------------------------- */
+:root {
+  --halo-space-2xs: 0.5rem;    /* 8   */
+  --halo-space-xs:  0.75rem;   /* 12  */
+  --halo-space-sm:  1rem;      /* 16  */
+  --halo-space-md:  1.5rem;    /* 24  */
+  --halo-space-lg:  2rem;      /* 32  */
+  --halo-space-xl:  3rem;      /* 48  */
+  --halo-space-2xl: 4rem;      /* 64  */
+  --halo-space-3xl: 5rem;      /* 80  */
+  --halo-space-4xl: 6rem;      /* 96  */
+  --halo-space-5xl: 7.5rem;    /* 120 */
+  --halo-space-6xl: 10rem;     /* 160 */
+
+  /* Layout */
+  --halo-container: 75rem;     /* 1200px content width */
+  --halo-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --halo-section-block: clamp(var(--halo-space-3xl), 10vw, var(--halo-space-6xl));
+
+  /* Radii */
+  --halo-radius-sm: 0.375rem;
+  --halo-radius-md: 0.75rem;
+  --halo-radius-lg: 1rem;
+  --halo-radius-pill: 999px;
+
+  /* Motion — transform + opacity only (Brief §25) */
+  --halo-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --halo-dur-fast: 160ms;
+  --halo-dur: 280ms;
+  --halo-dur-slow: 520ms;
+}
+
+/* --------------------------------------------------------------------------
+   5. Type scale — Inter (body/UI) + Fraunces (display/editorial), Brief §8
+   Fluid (clamp) so desktop/tablet/mobile stay intentional, Brief §12.
+   -------------------------------------------------------------------------- */
+:root {
+  --halo-font-body: "Inter", var(--halo-font-fallback);
+  --halo-font-display: "Fraunces", var(--halo-font-fallback-serif);
+  --halo-font-fallback: "Inter Fallback", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --halo-font-fallback-serif: "Fraunces Fallback", Georgia, "Times New Roman", serif;
+
+  --halo-text-xs:   0.75rem;    /* 12 */
+  --halo-text-sm:   0.875rem;   /* 14 */
+  --halo-text-base: 1.0625rem;  /* 17 — comfortable editorial body */
+  --halo-text-lead: clamp(1.125rem, 0.6vw + 1rem, 1.375rem);
+  --halo-text-h3:  clamp(1.375rem, 1vw + 1rem, 1.875rem);
+  --halo-text-h2:  clamp(2rem, 2.2vw + 1.2rem, 3.25rem);
+  --halo-text-display: clamp(2.75rem, 6.5vw, 5.5rem);
+  --halo-text-eyebrow: 0.75rem;
+
+  --halo-lh-tight: 1.06;
+  --halo-lh-snug: 1.2;
+  --halo-lh-body: 1.65;
+
+  --halo-tracking-eyebrow: 0.14em;
+  --halo-tracking-display: -0.02em;
+}
+</style>
+  <style>
+/* ===== inlined: assets/css/halo-custom.css ===== */
+/* ==========================================================================
+   HALO.BD — Custom CSS (component layer)
+   Requires: design-system/halo-tokens.css + assets/css/halo-fonts.css
+   --------------------------------------------------------------------------
+   Conventions (Brief §29, §31):
+   · All classes are prefixed  halo-  and map 1:1 to Elementor Flexbox
+     Containers/widgets via their CSS Class field (no scattered inline styles).
+   · Colors come only from semantic tokens → light/dark mode works everywhere.
+   · Motion = transform + opacity only, with reduced-motion support (§25).
+   · Breakpoints mirror Elementor: Tablet ≤1024px, Mobile ≤767px (§12).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. Base / reset helpers (applied via Elementor Kit body or globally)
+   -------------------------------------------------------------------------- */
+.halo-root,
+body.halo-body {
+  background: var(--halo-bg);
+  color: var(--halo-text);
+  font-family: var(--halo-font-body);
+  font-size: var(--halo-text-base);
+  line-height: var(--halo-lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.halo-root ::selection,
+body.halo-body ::selection {
+  background: var(--halo-accent);
+  color: var(--halo-on-accent);
+}
+
+/* Skip link (Brief §26 — WCAG 2.2) */
+.halo-skip-link {
+  position: absolute;
+  inset-inline-start: var(--halo-space-sm);
+  top: calc(-1 * var(--halo-space-5xl));
+  z-index: 1000;
+  padding: var(--halo-space-xs) var(--halo-space-md);
+  background: var(--halo-text);
+  color: var(--halo-bg);
+  border-radius: var(--halo-radius-sm);
+  font: 600 var(--halo-text-sm) var(--halo-font-body);
+  text-decoration: none;
+  transition: top var(--halo-dur-fast) var(--halo-ease);
+}
+.halo-skip-link:focus-visible { top: var(--halo-space-sm); }
+
+/* Visible, theme-safe focus state (§26) */
+:where(.halo-root, body.halo-body) :focus-visible {
+  outline: 2px solid var(--halo-focus);
+  outline-offset: 3px;
+  border-radius: var(--halo-radius-sm);
+}
+
+/* Dark-mode media handling (Brief §10 — dim + border, don't recolor) */
+:root[data-theme="dark"] .halo-media img,
+:root[data-theme="dark"] .halo-project-card .halo-card-media img {
+  filter: brightness(0.92);
+}
+.halo-media img,
+.halo-card-media img {
+  border-radius: var(--halo-radius-md);
+  border: 1px solid var(--halo-border);
+}
+
+/* --------------------------------------------------------------------------
+   1. Type utilities — Elementor headings inherit; add class to widget
+   -------------------------------------------------------------------------- */
+.halo-display {
+  font-family: var(--halo-font-display);
+  font-size: var(--halo-text-display);
+  font-weight: 520;
+  font-variation-settings: "opsz" 144;
+  line-height: var(--halo-lh-tight);
+  letter-spacing: var(--halo-tracking-display);
+}
+
+.halo-h2 {
+  font-family: var(--halo-font-display);
+  font-size: var(--halo-text-h2);
+  font-weight: 520;
+  font-variation-settings: "opsz" 72;
+  line-height: var(--halo-lh-snug);
+  letter-spacing: -0.015em;
+}
+
+.halo-h3 {
+  font-family: var(--halo-font-body);
+  font-size: var(--halo-text-h3);
+  font-weight: 600;
+  line-height: var(--halo-lh-snug);
+  letter-spacing: -0.01em;
+}
+
+.halo-lead {
+  font-size: var(--halo-text-lead);
+  line-height: var(--halo-lh-body);
+  color: var(--halo-text-muted);
+  max-width: 44ch;
+}
+
+.halo-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--halo-space-2xs);
+  font-size: var(--halo-text-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--halo-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--halo-text-muted);
+}
+.halo-eyebrow::before {
+  content: "";
+  inline-size: 1.5rem;
+  block-size: 1px;
+  background: var(--halo-border-strong);
+}
+
+.halo-text-muted { color: var(--halo-text-muted); }
+.halo-caption    { font-size: var(--halo-text-sm); color: var(--halo-text-muted); }
+
+/* --------------------------------------------------------------------------
+   2. Header / navigation — .halo-header (Brief §13)
+   -------------------------------------------------------------------------- */
+.halo-header {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--halo-bg) 82%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-block-end: 1px solid transparent;
+  transition: border-color var(--halo-dur) var(--halo-ease),
+              background-color var(--halo-dur) var(--halo-ease);
+}
+.halo-header.is-scrolled { border-block-end-color: var(--halo-border); }
+
+.halo-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--halo-space-xs);
+  min-block-size: 44px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--halo-text);
+}
+.halo-brand .halo-dot {
+  inline-size: 0.625rem;
+  block-size: 0.625rem;
+  border-radius: var(--halo-radius-pill);
+  background: var(--halo-accent);
+}
+
+.halo-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  padding-inline: var(--halo-space-xs);
+  font-size: var(--halo-text-sm);
+  font-weight: 500;
+  color: var(--halo-text-muted);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--halo-dur-fast) var(--halo-ease);
+}
+.halo-nav a::after {
+  content: "";
+  position: absolute;
+  inset-inline: var(--halo-space-xs);
+  inset-block-end: 8px;
+  block-size: 2px;
+  border-radius: 2px;
+  background: var(--halo-text);
+  transform: scaleX(0);
+  transform-origin: inline-start;
+  transition: transform var(--halo-dur) var(--halo-ease);
+}
+.halo-nav a:hover { color: var(--halo-text); }
+.halo-nav a:hover::after,
+.halo-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.halo-nav a[aria-current="page"] { color: var(--halo-text); }
+
+/* Theme toggle (56px visual target, accessible name set in JS) */
+.halo-theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 44px;
+  block-size: 44px;
+  border-radius: var(--halo-radius-pill);
+  border: 1px solid var(--halo-border);
+  background: var(--halo-surface);
+  color: var(--halo-text);
+  cursor: pointer;
+  transition: border-color var(--halo-dur-fast) var(--halo-ease),
+              background-color var(--halo-dur-fast) var(--halo-ease);
+}
+.halo-theme-toggle:hover { border-color: var(--halo-border-strong); }
+.halo-theme-toggle svg { inline-size: 18px; block-size: 18px; }
+.halo-theme-toggle .halo-icon-sun,
+.halo-theme-toggle .halo-icon-moon,
+.halo-theme-toggle .halo-icon-system { display: none; }
+:root[data-theme="light"] .halo-icon-sun   { display: block; }
+:root[data-theme="dark"]  .halo-icon-moon  { display: block; }
+:root:not([data-theme])   .halo-icon-system{ display: block; }
+
+/* --------------------------------------------------------------------------
+   3. Buttons / links — arrow micro-interaction (Brief §25)
+   -------------------------------------------------------------------------- */
+.halo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--halo-space-xs);
+  min-block-size: 48px;                  /* ≥44px touch target */
+  padding: 0 var(--halo-space-md);
+  border-radius: var(--halo-radius-pill);
+  font-size: var(--halo-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color var(--halo-dur-fast) var(--halo-ease),
+              color var(--halo-dur-fast) var(--halo-ease),
+              border-color var(--halo-dur-fast) var(--halo-ease);
+}
+.halo-btn .halo-btn-arrow { transition: transform var(--halo-dur) var(--halo-ease); }
+.halo-btn:hover .halo-btn-arrow { transform: translateX(4px); }
+
+.halo-btn--primary { background: var(--halo-text); color: var(--halo-bg); }
+.halo-btn--primary:hover { background: var(--halo-accent); color: var(--halo-on-accent); }
+
+.halo-btn--ghost {
+  background: transparent;
+  color: var(--halo-text);
+  border-color: var(--halo-border-strong);
+}
+.halo-btn--ghost:hover { background: var(--halo-surface-2); }
+
+/* Text arrow links (footer lists, card footers) */
+.halo-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--halo-space-2xs);
+  min-block-size: 44px;
+  font-weight: 600;
+  font-size: var(--halo-text-sm);
+  color: var(--halo-text);
+  text-decoration: none;
+}
+.halo-link-arrow svg { transition: transform var(--halo-dur) var(--halo-ease); }
+.halo-link-arrow:hover svg { transform: translateX(4px); }
+
+/* --------------------------------------------------------------------------
+   4. Section shell — .halo-section on Flexbox Containers
+   -------------------------------------------------------------------------- */
+.halo-section { padding-block: var(--halo-section-block); }
+.halo-section--tight { padding-block: var(--halo-space-3xl); }
+.halo-section + .halo-section { border-block-start: 1px solid var(--halo-border); }
+
+.halo-section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--halo-space-md);
+  margin-block-end: var(--halo-space-3xl);
+  max-width: 56rem;
+}
+
+.halo-wrap {
+  inline-size: min(100% - (var(--halo-gutter) * 2), var(--halo-container));
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   5. Hero — .halo-hero (Brief §15) + the "signature moment" (§37):
+      a restrained word-by-word headline reveal on load.
+   -------------------------------------------------------------------------- */
+.halo-hero {
+  padding-block-start: clamp(var(--halo-space-4xl), 12vh, var(--halo-space-6xl));
+  min-block-size: min(92svh, 60rem);
+  align-content: center;
+}
+.halo-hero .halo-display { max-width: 18ch; }
+.halo-hero .halo-display em { font-style: italic; }
+.halo-hero-cta { display: flex; flex-wrap: wrap; gap: var(--halo-space-sm); margin-block-start: var(--halo-space-lg); }
+.halo-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--halo-space-sm) var(--halo-space-lg);
+  margin-block-start: var(--halo-space-2xl);
+  font-size: var(--halo-text-sm);
+  color: var(--halo-text-muted);
+}
+.halo-hero-meta .halo-status { color: var(--halo-text); }
+
+/* --------------------------------------------------------------------------
+   6. Credibility band — stats stay editable (Brief §14, §30)
+   -------------------------------------------------------------------------- */
+.halo-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--halo-space-lg); }
+.halo-stat { display: flex; flex-direction: column; gap: var(--halo-space-2xs); }
+.halo-stat-value {
+  font-family: var(--halo-font-display);
+  font-variation-settings: "opsz" 72;
+  font-size: clamp(2.25rem, 3.2vw + 1rem, 3.5rem);
+  font-weight: 520;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.halo-stat-label { font-size: var(--halo-text-sm); color: var(--halo-text-muted); }
+
+/* Inline domain strip: AI · Music · Islamic lifestyle · … */
+.halo-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--halo-space-xs) var(--halo-space-md);
+  font-size: var(--halo-text-sm);
+  color: var(--halo-text-muted);
+}
+.halo-domains li { list-style: none; display: inline-flex; align-items: center; gap: var(--halo-space-md); }
+.halo-domains li:not(:last-child)::after { content: "·"; color: var(--halo-border-strong); }
+
+/* --------------------------------------------------------------------------
+   7. Selected Work — large editorial project cards (Brief §16)
+      Same classes power the Elementor Loop Grid "Project Card" item (§36).
+   -------------------------------------------------------------------------- */
+.halo-work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--halo-space-2xl) var(--halo-space-xl); }
+
+.halo-project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--halo-space-md);
+  text-decoration: none;
+  color: inherit;
+}
+.halo-card-media {
+  overflow: hidden;
+  border-radius: var(--halo-radius-lg);
+  border: 1px solid var(--halo-border);
+  background: var(--halo-surface-2);
+  aspect-ratio: 4 / 3;
+}
+.halo-card-media img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  transform: scale(1.001);
+  transition: transform var(--halo-dur-slow) var(--halo-ease);
+}
+.halo-project-card:hover .halo-card-media img { transform: scale(1.03); } /* §25: 1.02–1.04 */
+
+.halo-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--halo-space-sm);
+  font-size: var(--halo-text-sm);
+  color: var(--halo-text-muted);
+}
+.halo-card-title { transition: transform var(--halo-dur) var(--halo-ease); }
+.halo-project-card:hover .halo-card-title { transform: translateX(6px); } /* §25: card title movement */
+
+/* Placeholder media (labeled, Brief §30 — never fake screenshots) */
+.halo-card-media--placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--halo-text-muted);
+  font-size: var(--halo-text-sm);
+  letter-spacing: 0.04em;
+  border-style: dashed;
+  text-align: center;
+  padding: var(--halo-space-md);
+}
+
+/* --------------------------------------------------------------------------
+   8. Process — flexible, iterative (Brief §18)
+   -------------------------------------------------------------------------- */
+.halo-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--halo-space-xl) var(--halo-space-lg); counter-reset: halo-step; }
+.halo-step { border-block-start: 1px solid var(--halo-border-strong); padding-block-start: var(--halo-space-sm); }
+.halo-step::before {
+  counter-increment: halo-step;
+  content: counter(halo-step, decimal-leading-zero);
+  display: block;
+  font-size: var(--halo-text-xs);
+  letter-spacing: 0.12em;
+  color: var(--halo-text-muted);
+  margin-block-end: var(--halo-space-xs);
+}
+
+/* --------------------------------------------------------------------------
+   9. Expertise — signature strengths list + quiet tool groups (Brief §6)
+   -------------------------------------------------------------------------- */
+.halo-strengths { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 var(--halo-space-2xl); }
+.halo-strength {
+  display: flex;
+  align-items: baseline;
+  gap: var(--halo-space-md);
+  padding-block: var(--halo-space-sm);
+  border-block-end: 1px solid var(--halo-border);
+}
+.halo-strength b { font-weight: 600; font-size: var(--halo-text-h3); letter-spacing: -0.01em; }
+.halo-strength small { color: var(--halo-text-muted); }
+
+.halo-tools { display: flex; flex-wrap: wrap; gap: var(--halo-space-xs); }
+.halo-chip {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 34px;
+  padding-inline: var(--halo-space-sm);
+  border: 1px solid var(--halo-border);
+  border-radius: var(--halo-radius-pill);
+  font-size: var(--halo-text-sm);
+  color: var(--halo-text-muted);
+  background: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   10. Experience — editorial timeline, not a CV table (Brief §21)
+   -------------------------------------------------------------------------- */
+.halo-timeline { display: flex; flex-direction: column; }
+.halo-timeline-item {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) 1fr;
+  gap: var(--halo-space-md);
+  padding-block: var(--halo-space-lg);
+  border-block-start: 1px solid var(--halo-border);
+}
+.halo-timeline-item:last-child { border-block-end: 1px solid var(--halo-border); }
+.halo-timeline-period { font-size: var(--halo-text-sm); color: var(--halo-text-muted); }
+.halo-timeline-role { font-weight: 650; font-size: var(--halo-text-h3); letter-spacing: -0.01em; }
+.halo-timeline-org { color: var(--halo-text-muted); }
+
+/* --------------------------------------------------------------------------
+   11. Playground — "Things I build when nobody asks me to." (Brief §22)
+   -------------------------------------------------------------------------- */
+.halo-play-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--halo-space-lg); }
+.halo-play-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--halo-space-xs);
+  padding: var(--halo-space-md);
+  border: 1px solid var(--halo-border);
+  border-radius: var(--halo-radius-lg);
+  background: var(--halo-surface);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--halo-dur) var(--halo-ease),
+              border-color var(--halo-dur) var(--halo-ease);
+}
+.halo-play-item:hover { transform: translateY(-4px); border-color: var(--halo-border-strong); }
+
+/* --------------------------------------------------------------------------
+   12. Contact band + form (Brief §23)
+   -------------------------------------------------------------------------- */
+.halo-contact { text-align: start; }
+.halo-contact .halo-display { max-width: 16ch; }
+
+/* Elementor Pro form mapping: add class halo-form to the Form widget */
+.halo-form .elementor-field-group { margin-block-end: var(--halo-space-sm); }
+.halo-form .elementor-field {
+  inline-size: 100%;
+  min-block-size: 52px;
+  padding-inline: var(--halo-space-sm);
+  background: var(--halo-surface);
+  border: 1px solid var(--halo-border);
+  border-radius: var(--halo-radius-md);
+  color: var(--halo-text);
+  font: 400 var(--halo-text-sm) var(--halo-font-body);
+  transition: border-color var(--halo-dur-fast) var(--halo-ease);
+}
+.halo-form textarea.elementor-field { min-block-size: 10rem; padding-block: var(--halo-space-sm); }
+.halo-form .elementor-field:focus { border-color: var(--halo-focus); outline: none; }
+.halo-form .elementor-field-label {
+  display: block;
+  margin-block-end: var(--halo-space-2xs);
+  font-size: var(--halo-text-sm);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   13. Footer (Brief §24)
+   -------------------------------------------------------------------------- */
+.halo-footer {
+  border-block-start: 1px solid var(--halo-border);
+  padding-block: var(--halo-space-3xl) var(--halo-space-xl);
+  font-size: var(--halo-text-sm);
+}
+.halo-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--halo-space-2xl);
+  margin-block-end: var(--halo-space-2xl);
+}
+.halo-footer a { color: var(--halo-text-muted); text-decoration: none; transition: color var(--halo-dur-fast) var(--halo-ease); }
+.halo-footer a:hover { color: var(--halo-text); }
+.halo-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--halo-space-2xs); }
+.halo-footer-base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--halo-space-sm);
+  padding-block-start: var(--halo-space-lg);
+  border-block-start: 1px solid var(--halo-border);
+  color: var(--halo-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   14. Case-study article — .halo-case-study (Brief §17)
+   -------------------------------------------------------------------------- */
+.halo-case-study .halo-cs-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--halo-space-md);
+  padding-block: var(--halo-space-lg);
+  border-block: 1px solid var(--halo-border);
+}
+.halo-cs-summary {
+  background: var(--halo-surface);
+  border: 1px solid var(--halo-border);
+  border-radius: var(--halo-radius-lg);
+  padding: var(--halo-space-lg);
+}
+.halo-cs-prose { max-width: 44rem; }
+.halo-cs-prose > * + * { margin-block-start: var(--halo-space-md); }
+.halo-figure + .halo-figure { margin-block-start: var(--halo-space-xl); }
+.halo-figure figcaption { margin-block-start: var(--halo-space-xs); }
+
+/* --------------------------------------------------------------------------
+   15. Scroll reveal — IntersectionObserver adds .is-visible (Brief §25)
+   -------------------------------------------------------------------------- */
+.halo-reveal { opacity: 0; transform: translateY(18px); }
+.halo-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--halo-dur-slow) var(--halo-ease),
+              transform var(--halo-dur-slow) var(--halo-ease);
+  transition-delay: var(--halo-reveal-delay, 0ms);
+}
+
+/* Hero signature moment: word-by-word reveal on load (§37) */
+.halo-display .halo-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em);
+  animation: halo-word-in var(--halo-dur-slow) var(--halo-ease) forwards;
+  animation-delay: calc(var(--halo-word-i, 0) * 45ms + 120ms);
+}
+@keyframes halo-word-in { to { opacity: 1; transform: none; } }
+
+/* --------------------------------------------------------------------------
+   16. Responsive — Elementor breakpoint map (Brief §12)
+       Desktop ≥1025 · Tablet ≤1024 (covers 1024/834/768) · Mobile ≤767
+       (covers 390/375/360). 1440/1280 ride on fluid clamp() values.
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .halo-work-grid { gap: var(--halo-space-xl); }
+  .halo-process { grid-template-columns: repeat(2, 1fr); }
+  .halo-play-grid { grid-template-columns: repeat(2, 1fr); }
+  .halo-footer-grid { grid-template-columns: 1fr 1fr; }
+  .halo-hero { min-block-size: auto; }
+}
+
+@media (max-width: 767px) {
+  .halo-work-grid,
+  .halo-strengths,
+  .halo-play-grid { grid-template-columns: 1fr; }
+  .halo-stats { grid-template-columns: 1fr; gap: var(--halo-space-md); }
+  .halo-timeline-item { grid-template-columns: 1fr; gap: var(--halo-space-2xs); }
+  .halo-case-study .halo-cs-meta { grid-template-columns: 1fr 1fr; }
+  .halo-footer-grid { grid-template-columns: 1fr; }
+  .halo-hero-cta .halo-btn { inline-size: 100%; justify-content: center; }
+}
+
+/* No horizontal overflow anywhere (Brief §12) */
+.halo-root, body.halo-body { overflow-x: clip; }
+img, video { max-inline-size: 100%; block-size: auto; }
+
+/* --------------------------------------------------------------------------
+   17. Reduced motion (Brief §25, §26) — kill it all, no exceptions
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .halo-reveal { opacity: 1; transform: none; }
+  .halo-display .halo-word { animation: none; opacity: 1; transform: none; }
+  :where(.halo-root, body.halo-body) * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+
+  <!-- Person structured data (Brief §28 — real sameAs only; add when confirmed) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mehedi Hasan",
+    "jobTitle": "Principal Product Designer",
+    "url": "https://www.halo.bd/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" }
+  }
+  </script>
+
+  <!-- Preview-only structural glue: in production these come from Elementor
+       container flex settings + the HTML shown in each template's widgets. -->
+  <style>
+    .halo-header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:10px}
+    .halo-nav ul{display:flex;align-items:center;gap:8px;list-style:none;margin:0;padding:0}
+    .halo-header-actions{display:flex;align-items:center;gap:12px}
+    .halo-header .halo-link-arrow{min-block-size:44px}
+    .halo-strength{justify-content:space-between}
+    .halo-domains{margin:48px 0 0;padding:0}
+    .halo-banner{position:sticky;top:0;z-index:200;background:var(--halo-accent);color:var(--halo-on-accent);text-align:center;font:600 12px/2.6 var(--halo-font-body);letter-spacing:.06em;text-transform:uppercase}
+    @media (max-width:767px){.halo-nav{display:none}}
+  </style>
+</head>
+
+<body class="halo-body halo-root">
+  <div class="halo-banner">Design reference preview — production build is WordPress + Elementor (see /elementor/templates/)</div>
+  <a class="halo-skip-link" href="#main">Skip to content</a>
+
+  <!-- 1 · HEADER (mirrors halo-header.json) -->
+  <header class="halo-header">
+    <div class="halo-wrap halo-header-inner">
+      <a class="halo-brand" href="#"><span class="halo-dot" aria-hidden="true"></span><span>Mehedi&nbsp;Hasan</span></a>
+      <nav class="halo-nav" aria-label="Primary"><ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#playground">Playground</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul></nav>
+      <div class="halo-header-actions">
+        <button type="button" class="halo-theme-toggle" aria-label="Switch color theme">
+          <svg class="halo-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="halo-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="halo-icon-system" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+        </button>
+        <a class="halo-link-arrow" href="#" title="[PLACEHOLDER — resume PDF URL]">Resume <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2 · HERO (§15) -->
+    <section class="halo-section halo-hero">
+      <div class="halo-wrap">
+        <p class="halo-eyebrow halo-reveal">Dhaka, Bangladesh</p>
+        <h1 class="halo-display">I design <em>products</em>, not just screens.</h1>
+        <p class="halo-lead halo-reveal">I'm Mehedi Hasan — a Principal Product Designer. For <span data-start-year="2014">12+</span> years I've helped teams turn complex ideas into simple, useful products across AI, music, fintech, entertainment, telecom and more.</p>
+        <div class="halo-hero-cta halo-reveal">
+          <a class="halo-btn halo-btn--primary" href="#work">Explore my work <svg class="halo-btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a class="halo-btn halo-btn--ghost" href="#contact">Let's talk <svg class="halo-btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+        </div>
+        <div class="halo-hero-meta halo-reveal">
+          <span class="halo-status">[PLACEHOLDER: availability — e.g. “Open to select projects” · CONFIRM §23]</span>
+          <span><span data-start-year="2014">12+</span> years of experience</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · CREDIBILITY (§14) -->
+    <section class="halo-section halo-section--tight">
+      <div class="halo-wrap">
+        <div class="halo-stats">
+          <div class="halo-stat halo-reveal"><span class="halo-stat-value"><span data-start-year="2014">12+</span></span><span class="halo-stat-label">years designing digital products</span></div>
+          <div class="halo-stat halo-reveal"><span class="halo-stat-value">1.5M+</span><span class="halo-stat-label">installs — Shadhin Music, as of [PLACEHOLDER: month, year] §5</span></div>
+          <div class="halo-stat halo-reveal"><span class="halo-stat-value">3</span><span class="halo-stat-label">awards — Shadhin Music, as of [PLACEHOLDER: month, year] §5</span></div>
+        </div>
+        <ul class="halo-domains halo-reveal" aria-label="Industries">
+          <li>AI</li><li>Music</li><li>Islamic lifestyle</li><li>Entertainment</li><li>Fintech</li><li>Healthtech</li><li>E-commerce</li><li>SaaS</li><li>OTT</li><li>Telecom</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 · SELECTED WORK (§16) -->
+    <section class="halo-section" id="work">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Selected work</p>
+          <h2 class="halo-h2">Products I've helped shape.</h2>
+          <p class="halo-lead">A few of the products and ecosystems I've designed with their teams. Four flagship case studies; more across fintech, healthtech, SaaS, e-commerce, OTT and telecom.</p>
+        </div>
+        <div class="halo-work-grid">
+          <a class="halo-project-card halo-reveal" href="#" title="OneAI case study (template: halo-case-study-single.json)">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — OneAI product screenshots, owner to supply w/ permission §38]</div>
+            <div class="halo-card-meta"><span>AI · Platform</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">OneAI</h3>
+            <p class="halo-text-muted">All-in-one AI platform — a multi-model workspace that brings many AI workflows into one coherent product experience.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="halo-project-card halo-reveal" href="#" title="Shadhin Music case study">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — Shadhin Music app screenshots §38]</div>
+            <div class="halo-card-meta"><span>Music · Streaming</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">Shadhin Music</h3>
+            <p class="halo-text-muted">Music streaming and entertainment product. <strong>1.5M+ installs</strong> across Google Play &amp; App Store and <strong>3 awards</strong> — as of [PLACEHOLDER: month, year] §5.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="halo-project-card halo-reveal" href="#" title="Deen Islamic case study">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — Deen Islamic product screenshots §38]</div>
+            <div class="halo-card-meta"><span>Islamic lifestyle · Ecosystem</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">Deen Islamic</h3>
+            <p class="halo-text-muted">Islamic lifestyle and digital product ecosystem — everyday guidance brought into a calm, modern product experience.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="halo-project-card halo-reveal" href="#" title="WIN case study">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — WIN product screenshots §38]</div>
+            <div class="halo-card-meta"><span>Entertainment · Interactive</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">WIN</h3>
+            <p class="halo-text-muted">Interactive entertainment and quiz product ecosystem built around play, retention and delight.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · PROCESS (§18) -->
+    <section class="halo-section">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Process</p>
+          <h2 class="halo-h2">Flexible, not formulaic.</h2>
+          <p class="halo-lead">Every product earns its own path, but the rhythm stays the same — and it loops. Shipping is the middle, not the end.</p>
+        </div>
+        <div class="halo-process">
+          <h3 class="halo-step halo-h3 halo-reveal">Understand</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Explore</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Define</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Design</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Prototype</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Test</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Ship</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Improve</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · EXPERTISE (§6) -->
+    <section class="halo-section" id="expertise">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Expertise</p>
+          <h2 class="halo-h2">What I'm trusted with.</h2>
+          <p class="halo-lead">Eight signature strengths at Principal level — each is proven inside the case studies, not just listed here.</p>
+        </div>
+        <div class="halo-strengths">
+          <div class="halo-strength halo-reveal"><b>Product strategy</b><small>Problem framing, scope, roadmap trade-offs</small></div>
+          <div class="halo-strength halo-reveal"><b>User experience</b><small>Journeys, flows, information architecture</small></div>
+          <div class="halo-strength halo-reveal"><b>Interaction design</b><small>Behavior, states, micro-interactions</small></div>
+          <div class="halo-strength halo-reveal"><b>Design systems</b><small>Tokens, components, scalable patterns</small></div>
+          <div class="halo-strength halo-reveal"><b>Visual design</b><small>Typography, color, layout, motion</small></div>
+          <div class="halo-strength halo-reveal"><b>Prototyping</b><small>Quick tests to high-fidelity flows</small></div>
+          <div class="halo-strength halo-reveal"><b>Design leadership</b><small>Reviews, mentoring, cross-functional work</small></div>
+          <div class="halo-strength halo-reveal"><b>AI-assisted workflows</b><small>Faster exploration, sharper decisions</small></div>
+        </div>
+        <p class="halo-eyebrow" style="margin-top:48px;">Tools &amp; craft</p>
+        <div class="halo-tools" style="margin-top:12px;">
+          <span class="halo-chip">Figma</span><span class="halo-chip">Framer</span><span class="halo-chip">Lovable</span><span class="halo-chip">Google Antigravity</span><span class="halo-chip">Claude Code</span><span class="halo-chip">HTML</span><span class="halo-chip">CSS</span><span class="halo-chip">WordPress</span><span class="halo-chip">Elementor</span><span class="halo-chip">Photoshop</span><span class="halo-chip">Illustrator</span><span class="halo-chip">After Effects</span><span class="halo-chip">Premiere Pro</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · AI + TECHNOLOGY (§19) -->
+    <section class="halo-section">
+      <div class="halo-wrap halo-section-head">
+        <p class="halo-eyebrow">AI + technology</p>
+        <h2 class="halo-h2">Designing beyond the canvas.</h2>
+        <p class="halo-lead">I use AI and modern build tools to move from idea to working prototype faster — to test interactions, validate concepts and speak the same language as engineering. I'm a product designer with strong technology fluency, not a full-time engineer.</p>
+      </div>
+    </section>
+
+    <!-- 8 · ABOUT (§20) -->
+    <section class="halo-section" id="about">
+      <div class="halo-wrap halo-section-head">
+        <p class="halo-eyebrow">About</p>
+        <h2 class="halo-h2">Design that balances people, business and technology.</h2>
+        <p class="halo-lead">I'm a Principal Product Designer in Dhaka with <span data-start-year="2014">12+</span> years across AI, music, Islamic lifestyle, entertainment, fintech, healthtech, SaaS, e-commerce, OTT and telecom. Off the clock: motorcycles, movies, and an unreasonable curiosity about how things are made.</p>
+        <div class="halo-card-media halo-card-media--placeholder" style="aspect-ratio:16/9;max-width:44rem;">[PLACEHOLDER — real, well-lit portrait §20. No stock imagery §38]</div>
+      </div>
+    </section>
+
+    <!-- 9 · EXPERIENCE (§21) -->
+    <section class="halo-section">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Experience</p>
+          <h2 class="halo-h2">Where I've practiced.</h2>
+        </div>
+        <div class="halo-timeline halo-reveal">
+          <div class="halo-timeline-item"><span class="halo-timeline-period">[PERIOD — CONFIRM]</span><div><span class="halo-timeline-role">Principal Product Designer</span><br><span class="halo-timeline-org">[COMPANY / PRODUCT — CONFIRM §21]</span></div></div>
+          <div class="halo-timeline-item"><span class="halo-timeline-period">[PERIOD — CONFIRM]</span><div><span class="halo-timeline-role">[PREVIOUS ROLE — CONFIRM]</span><br><span class="halo-timeline-org">[COMPANY — CONFIRM]</span></div></div>
+          <div class="halo-timeline-item"><span class="halo-timeline-period">Telecom</span><div><span class="halo-timeline-role">Worked closely with product and digital teams at Grameenphone, Robi and Banglalink.</span><br><span class="halo-timeline-org">[CONFIRM exact nature of collaboration §4 — text names only; no operator logos without written permission]</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · PLAYGROUND (§22) -->
+    <section class="halo-section" id="playground">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Playground</p>
+          <h2 class="halo-h2">Things I build when nobody asks me to.</h2>
+        </div>
+        <div class="halo-play-grid">
+          <a class="halo-play-item halo-reveal" href="#"><b class="halo-h3">[Experiment 01]</b><small class="halo-caption">[PLACEHOLDER — real UI/motion/AI experiment §22, §40]</small></a>
+          <a class="halo-play-item halo-reveal" href="#"><b class="halo-h3">[Experiment 02]</b><small class="halo-caption">[PLACEHOLDER]</small></a>
+          <a class="halo-play-item halo-reveal" href="#"><b class="halo-h3">[Experiment 03]</b><small class="halo-caption">[PLACEHOLDER]</small></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 · CONTACT (§23) -->
+    <section class="halo-section halo-contact" id="contact">
+      <div class="halo-wrap halo-section-head">
+        <p class="halo-eyebrow">Contact</p>
+        <h2 class="halo-display halo-reveal">Have a product worth <em>designing</em>?</h2>
+        <p class="halo-lead">Let's turn complex ideas into simple, meaningful experiences.</p>
+        <div class="halo-hero-cta halo-reveal">
+          <a class="halo-btn halo-btn--primary" href="#" title="[PLACEHOLDER — real contact email / form]">Start a conversation <svg class="halo-btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+        </div>
+        <p class="halo-caption">Or write directly: <strong>[PLACEHOLDER — real contact email]</strong> · [PLACEHOLDER: response-time expectation]</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12 · FOOTER (mirrors halo-footer.json, §24) -->
+  <footer class="halo-footer">
+    <div class="halo-wrap">
+      <div class="halo-footer-grid">
+        <div>
+          <a class="halo-brand" href="#"><span class="halo-dot" aria-hidden="true"></span><span>Mehedi&nbsp;Hasan</span></a>
+          <p class="halo-caption">Principal Product Designer<br>Dhaka, Bangladesh</p>
+          <p class="halo-caption">Designed with curiosity. Built with intention.</p>
+        </div>
+        <nav aria-label="Footer"><ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#playground">Playground</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul></nav>
+        <div>
+          <p class="halo-caption">Elsewhere — [PLACEHOLDER: real social URLs only §23]</p>
+          <ul><li><a href="#" rel="me">LinkedIn</a></li><li><a href="#" rel="me">Behance</a></li><li><a href="#" rel="me">Dribbble</a></li></ul>
+        </div>
+      </div>
+      <div class="halo-footer-base">
+        <span>© <span data-halo-year>2026</span> Mehedi Hasan</span>
+        <span>Dhaka, Bangladesh</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+/* ===== inlined: assets/js/halo-theme.js ===== */
+/* ==========================================================================
+   HALO.BD — Theme system  (Master Build Brief §10)
+   States: System → Light → Dark, stored in localStorage ("halo-theme"),
+   color-scheme set, no flash of the wrong theme.
+
+   INSTALL (important for no-flash):
+   Copy lines between === BOOT START === and === BOOT END === into an INLINE
+   <script> in <head> BEFORE any stylesheet paint — use Elementor Custom Code
+   (Site → Custom Code, location "<head>") or the child theme's wp_head.
+   The remainder loads deferred as halo-theme.js.
+   ========================================================================== */
+
+/* === BOOT START (inline in <head>) === */
+(function () {
+  try {
+    var stored = localStorage.getItem("halo-theme"); /* "light" | "dark" | null(system) */
+    var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var theme = stored || (systemDark ? "dark" : "light");
+    var root = document.documentElement;
+    root.setAttribute("data-theme", theme);
+    root.style.colorScheme = theme;
+  } catch (e) {
+    /* localStorage unavailable (private mode) — default light via CSS :root */
+  }
+})();
+/* === BOOT END === */
+
+/* Deferred: toggle behavior + system-change tracking --------------------- */
+(function () {
+  "use strict";
+
+  var KEY = "halo-theme";
+  var CYCLE = { system: "light", light: "dark", dark: "system" };
+  var LABELS = {
+    system: "Theme: system. Activate to switch to light mode.",
+    light: "Theme: light. Activate to switch to dark mode.",
+    dark: "Theme: dark. Activate to follow the system theme."
+  };
+
+  function getState() {
+    try { return localStorage.getItem(KEY) || "system"; } catch (e) { return "system"; }
+  }
+
+  function effectiveTheme(state) {
+    if (state !== "system") return state;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  function apply(state, persist) {
+    try {
+      if (persist) {
+        if (state === "system") localStorage.removeItem(KEY);
+        else localStorage.setItem(KEY, state);
+      }
+    } catch (e) { /* ignore */ }
+    var theme = effectiveTheme(state);
+    var root = document.documentElement;
+    root.setAttribute("data-theme", theme);
+    root.setAttribute("data-theme-source", state);
+    root.style.colorScheme = theme;
+    document.querySelectorAll(".halo-theme-toggle").forEach(function (btn) {
+      btn.setAttribute("aria-label", LABELS[state]);
+      btn.setAttribute("aria-pressed", state === "system" ? "false" : "true");
+      btn.setAttribute("title", LABELS[state]);
+    });
+    /* Keep <meta name="theme-color"> in sync for mobile chrome. */
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", theme === "dark" ? "#0A0A0A" : "#F6F6F3");
+  }
+
+  function init() {
+    apply(getState(), false);
+    document.querySelectorAll(".halo-theme-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        apply(CYCLE[getState()], true);
+      });
+    });
+    /* Follow OS changes while the user hasn't chosen explicitly. */
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+      if (getState() === "system") apply("system", false);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+  <script>
+/* ===== inlined: assets/js/halo.js ===== */
+/* ==========================================================================
+   HALO.BD — Interactions  (Master Build Brief §25, §37)
+   One tiny file, zero dependencies:
+     1. Scroll reveals      — IntersectionObserver, transform+opacity only
+     2. Hero word reveal    — splits .halo-display into words (signature moment)
+     3. Sticky header state — border when scrolled
+     4. Years of experience — computed once from [data-start-year] (§37:
+                              "store the start year once, so it never goes stale")
+     5. Footer year         — [data-halo-year]
+   Respects prefers-reduced-motion throughout.
+   ========================================================================== */
+(function () {
+  "use strict";
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* --- 1. Scroll reveals (stagger via inline --halo-reveal-delay) ------- */
+  function initReveals() {
+    var items = document.querySelectorAll(".halo-reveal");
+    if (!items.length) return;
+    if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+      items.forEach(function (el) { el.classList.add("is-visible"); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); /* reveal once */
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+    items.forEach(function (el) { observer.observe(el); });
+  }
+
+  /* --- 2. Hero signature: word-by-word reveal --------------------------- */
+  function initHeroWords() {
+    var display = document.querySelector(".halo-hero .halo-display");
+    if (!display || reduceMotion.matches) return;
+    if (display.dataset.haloSplit === "done") return; /* re-init safe */
+    var nodes = Array.prototype.slice.call(display.childNodes);
+    display.textContent = "";
+    var index = 0;
+    nodes.forEach(function (node) {
+      var italic = node.nodeType === 1 && node.tagName === "EM";
+      var text = node.textContent || "";
+      text.split(/(\s+)/).forEach(function (piece) {
+        if (!piece.trim()) { display.appendChild(document.createTextNode(" ")); return; }
+        var span = document.createElement("span");
+        span.className = "halo-word";
+        span.style.setProperty("--halo-word-i", String(index++));
+        if (italic) {
+          var em = document.createElement("em");
+          em.textContent = piece;
+          span.appendChild(em);
+        } else {
+          span.textContent = piece;
+        }
+        display.appendChild(span);
+      });
+    });
+    display.dataset.haloSplit = "done";
+  }
+
+  /* --- 3. Sticky header state ------------------------------------------- */
+  function initHeader() {
+    var header = document.querySelector(".halo-header");
+    if (!header) return;
+    var tick = false;
+    function onScroll() {
+      if (tick) return;
+      tick = true;
+      requestAnimationFrame(function () {
+        header.classList.toggle("is-scrolled", window.scrollY > 8);
+        tick = false;
+      });
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* --- 4. Experience years, never stale (§37) -----------------------------
+     Markup: <span data-start-year="2014">12+</span> years
+     [PLACEHOLDER — confirm actual career start year, Brief §42]          */
+  var START_YEAR_FALLBACK = 2014;
+  function initYears() {
+    var now = new Date().getFullYear();
+    document.querySelectorAll("[data-start-year]").forEach(function (el) {
+      var start = parseInt(el.getAttribute("data-start-year"), 10) || START_YEAR_FALLBACK;
+      el.textContent = Math.max(0, now - start) + "+";
+    });
+    document.querySelectorAll("[data-halo-year]").forEach(function (el) {
+      el.textContent = String(now);
+    });
+  }
+
+  function init() {
+    initReveals();
+    initHeroWords();
+    initHeader();
+    initYears();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+  /* Re-run reveals if Elementor/front-end re-renders late content. */
+  window.addEventListener("elementor/frontend/init", function () {
+    document.removeEventListener("DOMContentLoaded", init);
+  });
+})();
+</script>
+</body>
+</html>

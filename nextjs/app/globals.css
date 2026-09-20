@@ -1,0 +1,123 @@
+/* ==========================================================================
+   HALO.BD (Next.js) — global styles
+   1. Design tokens + full component layer, VERBATIM from the WordPress kit
+      (same files → both builds share one design system).
+   2. Font variables from next/font (Inter + Fraunces, self-hosted at build).
+   3. React-specific structural glue (header row, mobile nav, Reveal wrapper).
+   ========================================================================== */
+@import "./styles/halo-tokens.css";
+@import "./styles/halo-custom.css";
+
+/* Font families: loaded via <link> in app/layout.tsx in this repo build.
+   (Production self-host switch: next/font/local — see README §Fonts.) */
+:root {
+  --halo-font-body: "Inter", "Inter Fallback", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --halo-font-display: "Fraunces", "Fraunces Fallback", Georgia, "Times New Roman", serif;
+}
+
+/* Size-matched fallbacks (low CLS between fallback and webfont) */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 1.06;
+  ascent-override: 0.90;
+  descent-override: 0.22;
+  line-gap-override: 0;
+}
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local("Georgia");
+  size-adjust: 1.04;
+  ascent-override: 0.95;
+  descent-override: 0.25;
+  line-gap-override: 0;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Header — structural row (Elementor supplied this via container settings) */
+.halo-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 10px;
+}
+.halo-header-actions { display: flex; align-items: center; gap: 12px; }
+.halo-nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile nav — disclosure button + panel (replaces Elementor nav-menu toggle) */
+.halo-nav-toggle {
+  display: none;
+  inline-size: 44px;
+  block-size: 44px;
+  place-items: center;
+  border: 1px solid var(--halo-border);
+  border-radius: var(--halo-radius-pill);
+  background: var(--halo-surface);
+  color: var(--halo-text);
+  cursor: pointer;
+}
+.halo-nav-toggle svg { inline-size: 18px; block-size: 18px; }
+
+@media (max-width: 767px) {
+  .halo-nav-toggle { display: inline-grid; }
+  .halo-nav { display: none; }
+  .halo-nav.is-open {
+    display: block;
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline: 0;
+    background: var(--halo-bg);
+    border-block-end: 1px solid var(--halo-border);
+    padding: var(--halo-space-sm) var(--halo-gutter) var(--halo-space-md);
+  }
+  .halo-nav.is-open > ul { flex-direction: column; align-items: stretch; gap: 0; }
+  .halo-nav.is-open a { padding-inline: var(--halo-space-xs); }
+  .halo-header-actions .halo-resume { display: none; }
+}
+
+/* Reveal wrapper should not add layout quirks */
+.halo-reveal { will-change: transform, opacity; }
+
+/* Strength rows: text ends aligned on wide screens */
+.halo-strength { justify-content: space-between; }
+
+/* Domain strip margin */
+.halo-domains { margin: 48px 0 0; padding: 0; }
+
+/* Contact form (React version, server-action powered) */
+.halo-form-field { margin-block-end: var(--halo-space-sm); }
+.halo-form-field label {
+  display: block;
+  margin-block-end: var(--halo-space-2xs);
+  font-size: var(--halo-text-sm);
+  font-weight: 600;
+}
+.halo-form-field input,
+.halo-form-field textarea {
+  inline-size: 100%;
+  min-block-size: 52px;
+  padding-inline: var(--halo-space-sm);
+  background: var(--halo-surface);
+  border: 1px solid var(--halo-border);
+  border-radius: var(--halo-radius-md);
+  color: var(--halo-text);
+  font: 400 var(--halo-text-sm) var(--halo-font-body);
+  transition: border-color var(--halo-dur-fast) var(--halo-ease);
+}
+.halo-form-field textarea { min-block-size: 10rem; padding-block: var(--halo-space-sm); resize: vertical; }
+.halo-form-field input:focus,
+.halo-form-field textarea:focus { border-color: var(--halo-focus); outline: none; }
+.halo-hp { position: absolute; inset-inline-start: -9999px; block-size: 1px; inline-size: 1px; overflow: hidden; }
+.halo-form-status[role="status"] { margin-block-start: var(--halo-space-sm); }
+.halo-form-status.is-ok { color: var(--halo-text); }
+.halo-form-status.is-error { color: var(--halo-accent); }

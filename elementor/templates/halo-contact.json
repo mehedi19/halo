@@ -1,0 +1,115 @@
+{
+  "content": [
+    {
+      "id": "13a9f8b",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-hero halo-contact"
+      },
+      "elements": [
+        {
+          "id": "11b642e",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap halo-section-head"
+          },
+          "elements": [
+            {
+              "id": "07f3b5d",
+              "elType": "widget",
+              "settings": {
+                "html": "<p class=\"halo-eyebrow\">Contact</p>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "09e76ba",
+              "elType": "widget",
+              "settings": {
+                "title": "Have a product worth <em>designing</em>?",
+                "header_size": "h1",
+                "_css_classes": "halo-display"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "0bdb217",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p class=\"halo-lead\">Let's turn complex ideas into simple, meaningful experiences. [PLACEHOLDER: availability + response-time expectation — CONFIRM §23]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "0dced74",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-hero-meta\"><span>Direct: <strong>[PLACEHOLDER — real contact email]</strong></span><span>Dhaka, Bangladesh · GMT+6</span></div>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "0fc28d1",
+              "elType": "widget",
+              "settings": {
+                "form_name": "HALO contact",
+                "_css_classes": "halo-form",
+                "button_text": "Start a conversation",
+                "form_fields": [
+                  {
+                    "_id": "name",
+                    "field_type": "text",
+                    "field_label": "Name",
+                    "placeholder": "Your name",
+                    "required": "true",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "email",
+                    "field_type": "email",
+                    "field_label": "Email",
+                    "placeholder": "you@example.com",
+                    "required": "true",
+                    "width": "50"
+                  },
+                  {
+                    "_id": "message",
+                    "field_type": "textarea",
+                    "field_label": "What are you building?",
+                    "placeholder": "A few honest lines beat a long brief.",
+                    "required": "true",
+                    "width": "100",
+                    "rows": 6
+                  },
+                  {
+                    "_id": "honeypot",
+                    "field_type": "honeypot",
+                    "field_label": "",
+                    "width": "100"
+                  }
+                ],
+                "email_to": "[PLACEHOLDER — real inbox]",
+                "email_subject": "New inquiry — halo.bd",
+                "success_message": "Thanks — your note landed. I'll reply within two working days."
+              },
+              "elements": [],
+              "widgetType": "form"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "version": "0.4",
+  "title": "HALO — Contact",
+  "type": "page"
+}

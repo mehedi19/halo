@@ -1,0 +1,122 @@
+{
+  "content": [
+    {
+      "id": "196c85c",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-footer"
+      },
+      "elements": [
+        {
+          "id": "1778cff",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "1391645",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-footer-grid"
+              },
+              "elements": [
+                {
+                  "id": "09ced74",
+                  "elType": "container",
+                  "settings": {
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "unit": "px",
+                      "size": 8
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "03f3b5d",
+                      "elType": "widget",
+                      "settings": {
+                        "html": "<a class=\"halo-brand\" href=\"/\"><span class=\"halo-dot\" aria-hidden=\"true\"></span><span>Mehedi&nbsp;Hasan</span></a>"
+                      },
+                      "elements": [],
+                      "widgetType": "html"
+                    },
+                    {
+                      "id": "05e76ba",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p class=\"halo-caption\">Principal Product Designer<br>Dhaka, Bangladesh</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "07db217",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p class=\"halo-caption\">Designed with curiosity. Built with intention.</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    }
+                  ],
+                  "isInner": false
+                },
+                {
+                  "id": "0db642e",
+                  "elType": "container",
+                  "settings": {},
+                  "elements": [
+                    {
+                      "id": "0bc28d1",
+                      "elType": "widget",
+                      "settings": {
+                        "html": "<nav aria-label=\"Footer\"><ul><li><a href=\"/work/\">Work</a></li><li><a href=\"/about/\">About</a></li><li><a href=\"/#expertise\">Expertise</a></li><li><a href=\"/playground/\">Playground</a></li><li><a href=\"/contact/\">Contact</a></li></ul></nav>"
+                      },
+                      "elements": [],
+                      "widgetType": "html"
+                    }
+                  ],
+                  "isInner": false
+                },
+                {
+                  "id": "119dae8",
+                  "elType": "container",
+                  "settings": {},
+                  "elements": [
+                    {
+                      "id": "0fa9f8b",
+                      "elType": "widget",
+                      "settings": {
+                        "html": "<p class=\"halo-caption\">Elsewhere — [PLACEHOLDER: real social URLs only, Brief §23]</p><ul><li><a href=\"#\" rel=\"me\">LinkedIn</a></li><li><a href=\"#\" rel=\"me\">Behance</a></li><li><a href=\"#\" rel=\"me\">Dribbble</a></li></ul>"
+                      },
+                      "elements": [],
+                      "widgetType": "html"
+                    }
+                  ],
+                  "isInner": false
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "15851a2",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-footer-base\"><span>© <span data-halo-year>2026</span> Mehedi Hasan</span><span>Dhaka, Bangladesh</span></div>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "HALO — Footer",
+  "type": "section"
+}

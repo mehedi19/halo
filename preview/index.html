@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    ============================================================================
+    HALO.BD — DESIGN REFERENCE PREVIEW  (not the production site)
+    ----------------------------------------------------------------------------
+    Purpose: visualize the design system + homepage narrative (Brief §14) using
+    the SAME tokens/CSS/JS that ship for WordPress + Elementor:
+      /design-system/halo-tokens.css · /assets/css/halo-custom.css
+      /assets/js/halo-theme.js · /assets/js/halo.js
+    The production site is built from /elementor/templates/*.json — this file
+    is excluded from the WordPress build. Fonts load from Google Fonts CDN here
+    ONLY because this sandbox cannot download font binaries; production
+    self-hosts them (assets/fonts/README.md).
+    ============================================================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehedi Hasan — Principal Product Designer in Dhaka</title>
+  <meta name="description" content="Mehedi Hasan is a Principal Product Designer based in Dhaka with 12+ years of experience designing digital products, user experiences, interfaces and design systems across AI, music, fintech, entertainment, telecom and more.">
+  <meta name="theme-color" content="#F6F6F3">
+  <meta property="og:title" content="Mehedi Hasan — Principal Product Designer in Dhaka">
+  <meta property="og:description" content="I design products, not just screens. 12+ years across AI, music, fintech, entertainment, telecom and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.halo.bd/">
+
+  <!-- No-flash theme boot (copy of BOOT block from assets/js/halo-theme.js) -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("halo-theme");
+        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (systemDark ? "dark" : "light");
+        var root = document.documentElement;
+        root.setAttribute("data-theme", theme);
+        root.style.colorScheme = theme;
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Preview-only webfont pull (production: self-hosted per assets/fonts/README.md) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/design-system/halo-tokens.css">
+  <link rel="stylesheet" href="/assets/css/halo-custom.css">
+
+  <!-- Person structured data (Brief §28 — real sameAs only; add when confirmed) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mehedi Hasan",
+    "jobTitle": "Principal Product Designer",
+    "url": "https://www.halo.bd/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" }
+  }
+  </script>
+
+  <!-- Preview-only structural glue: in production these come from Elementor
+       container flex settings + the HTML shown in each template's widgets. -->
+  <style>
+    .halo-header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:10px}
+    .halo-nav ul{display:flex;align-items:center;gap:8px;list-style:none;margin:0;padding:0}
+    .halo-header-actions{display:flex;align-items:center;gap:12px}
+    .halo-header .halo-link-arrow{min-block-size:44px}
+    .halo-strength{justify-content:space-between}
+    .halo-domains{margin:48px 0 0;padding:0}
+    .halo-banner{position:sticky;top:0;z-index:200;background:var(--halo-accent);color:var(--halo-on-accent);text-align:center;font:600 12px/2.6 var(--halo-font-body);letter-spacing:.06em;text-transform:uppercase}
+    @media (max-width:767px){.halo-nav{display:none}}
+  </style>
+</head>
+
+<body class="halo-body halo-root">
+  <div class="halo-banner">Design reference preview — production build is WordPress + Elementor (see /elementor/templates/)</div>
+  <a class="halo-skip-link" href="#main">Skip to content</a>
+
+  <!-- 1 · HEADER (mirrors halo-header.json) -->
+  <header class="halo-header">
+    <div class="halo-wrap halo-header-inner">
+      <a class="halo-brand" href="/preview/"><span class="halo-dot" aria-hidden="true"></span><span>Mehedi&nbsp;Hasan</span></a>
+      <nav class="halo-nav" aria-label="Primary"><ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#playground">Playground</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul></nav>
+      <div class="halo-header-actions">
+        <button type="button" class="halo-theme-toggle" aria-label="Switch color theme">
+          <svg class="halo-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="halo-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="halo-icon-system" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+        </button>
+        <a class="halo-link-arrow" href="#" title="[PLACEHOLDER — resume PDF URL]">Resume <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2 · HERO (§15) -->
+    <section class="halo-section halo-hero">
+      <div class="halo-wrap">
+        <p class="halo-eyebrow halo-reveal">Dhaka, Bangladesh</p>
+        <h1 class="halo-display">I design <em>products</em>, not just screens.</h1>
+        <p class="halo-lead halo-reveal">I'm Mehedi Hasan — a Principal Product Designer. For <span data-start-year="2014">12+</span> years I've helped teams turn complex ideas into simple, useful products across AI, music, fintech, entertainment, telecom and more.</p>
+        <div class="halo-hero-cta halo-reveal">
+          <a class="halo-btn halo-btn--primary" href="#work">Explore my work <svg class="halo-btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a class="halo-btn halo-btn--ghost" href="#contact">Let's talk <svg class="halo-btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+        </div>
+        <div class="halo-hero-meta halo-reveal">
+          <span class="halo-status">[PLACEHOLDER: availability — e.g. “Open to select projects” · CONFIRM §23]</span>
+          <span><span data-start-year="2014">12+</span> years of experience</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · CREDIBILITY (§14) -->
+    <section class="halo-section halo-section--tight">
+      <div class="halo-wrap">
+        <div class="halo-stats">
+          <div class="halo-stat halo-reveal"><span class="halo-stat-value"><span data-start-year="2014">12+</span></span><span class="halo-stat-label">years designing digital products</span></div>
+          <div class="halo-stat halo-reveal"><span class="halo-stat-value">1.5M+</span><span class="halo-stat-label">installs — Shadhin Music, as of [PLACEHOLDER: month, year] §5</span></div>
+          <div class="halo-stat halo-reveal"><span class="halo-stat-value">3</span><span class="halo-stat-label">awards — Shadhin Music, as of [PLACEHOLDER: month, year] §5</span></div>
+        </div>
+        <ul class="halo-domains halo-reveal" aria-label="Industries">
+          <li>AI</li><li>Music</li><li>Islamic lifestyle</li><li>Entertainment</li><li>Fintech</li><li>Healthtech</li><li>E-commerce</li><li>SaaS</li><li>OTT</li><li>Telecom</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 · SELECTED WORK (§16) -->
+    <section class="halo-section" id="work">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Selected work</p>
+          <h2 class="halo-h2">Products I've helped shape.</h2>
+          <p class="halo-lead">A few of the products and ecosystems I've designed with their teams. Four flagship case studies; more across fintech, healthtech, SaaS, e-commerce, OTT and telecom.</p>
+        </div>
+        <div class="halo-work-grid">
+          <a class="halo-project-card halo-reveal" href="#" title="OneAI case study (template: halo-case-study-single.json)">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — OneAI product screenshots, owner to supply w/ permission §38]</div>
+            <div class="halo-card-meta"><span>AI · Platform</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">OneAI</h3>
+            <p class="halo-text-muted">All-in-one AI platform — a multi-model workspace that brings many AI workflows into one coherent product experience.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="halo-project-card halo-reveal" href="#" title="Shadhin Music case study">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — Shadhin Music app screenshots §38]</div>
+            <div class="halo-card-meta"><span>Music · Streaming</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">Shadhin Music</h3>
+            <p class="halo-text-muted">Music streaming and entertainment product. <strong>1.5M+ installs</strong> across Google Play &amp; App Store and <strong>3 awards</strong> — as of [PLACEHOLDER: month, year] §5.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="halo-project-card halo-reveal" href="#" title="Deen Islamic case study">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — Deen Islamic product screenshots §38]</div>
+            <div class="halo-card-meta"><span>Islamic lifestyle · Ecosystem</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">Deen Islamic</h3>
+            <p class="halo-text-muted">Islamic lifestyle and digital product ecosystem — everyday guidance brought into a calm, modern product experience.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+          <a class="halo-project-card halo-reveal" href="#" title="WIN case study">
+            <div class="halo-card-media halo-card-media--placeholder">[PLACEHOLDER — WIN product screenshots §38]</div>
+            <div class="halo-card-meta"><span>Entertainment · Interactive</span><span>Role [PLACEHOLDER] · Period [PLACEHOLDER]</span></div>
+            <h3 class="halo-card-title halo-h3">WIN</h3>
+            <p class="halo-text-muted">Interactive entertainment and quiz product ecosystem built around play, retention and delight.</p>
+            <span class="halo-link-arrow">View case study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · PROCESS (§18) -->
+    <section class="halo-section">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Process</p>
+          <h2 class="halo-h2">Flexible, not formulaic.</h2>
+          <p class="halo-lead">Every product earns its own path, but the rhythm stays the same — and it loops. Shipping is the middle, not the end.</p>
+        </div>
+        <div class="halo-process">
+          <h3 class="halo-step halo-h3 halo-reveal">Understand</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Explore</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Define</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Design</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Prototype</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Test</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Ship</h3>
+          <h3 class="halo-step halo-h3 halo-reveal">Improve</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · EXPERTISE (§6) -->
+    <section class="halo-section" id="expertise">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Expertise</p>
+          <h2 class="halo-h2">What I'm trusted with.</h2>
+          <p class="halo-lead">Eight signature strengths at Principal level — each is proven inside the case studies, not just listed here.</p>
+        </div>
+        <div class="halo-strengths">
+          <div class="halo-strength halo-reveal"><b>Product strategy</b><small>Problem framing, scope, roadmap trade-offs</small></div>
+          <div class="halo-strength halo-reveal"><b>User experience</b><small>Journeys, flows, information architecture</small></div>
+          <div class="halo-strength halo-reveal"><b>Interaction design</b><small>Behavior, states, micro-interactions</small></div>
+          <div class="halo-strength halo-reveal"><b>Design systems</b><small>Tokens, components, scalable patterns</small></div>
+          <div class="halo-strength halo-reveal"><b>Visual design</b><small>Typography, color, layout, motion</small></div>
+          <div class="halo-strength halo-reveal"><b>Prototyping</b><small>Quick tests to high-fidelity flows</small></div>
+          <div class="halo-strength halo-reveal"><b>Design leadership</b><small>Reviews, mentoring, cross-functional work</small></div>
+          <div class="halo-strength halo-reveal"><b>AI-assisted workflows</b><small>Faster exploration, sharper decisions</small></div>
+        </div>
+        <p class="halo-eyebrow" style="margin-top:48px;">Tools &amp; craft</p>
+        <div class="halo-tools" style="margin-top:12px;">
+          <span class="halo-chip">Figma</span><span class="halo-chip">Framer</span><span class="halo-chip">Lovable</span><span class="halo-chip">Google Antigravity</span><span class="halo-chip">Claude Code</span><span class="halo-chip">HTML</span><span class="halo-chip">CSS</span><span class="halo-chip">WordPress</span><span class="halo-chip">Elementor</span><span class="halo-chip">Photoshop</span><span class="halo-chip">Illustrator</span><span class="halo-chip">After Effects</span><span class="halo-chip">Premiere Pro</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · AI + TECHNOLOGY (§19) -->
+    <section class="halo-section">
+      <div class="halo-wrap halo-section-head">
+        <p class="halo-eyebrow">AI + technology</p>
+        <h2 class="halo-h2">Designing beyond the canvas.</h2>
+        <p class="halo-lead">I use AI and modern build tools to move from idea to working prototype faster — to test interactions, validate concepts and speak the same language as engineering. I'm a product designer with strong technology fluency, not a full-time engineer.</p>
+      </div>
+    </section>
+
+    <!-- 8 · ABOUT (§20) -->
+    <section class="halo-section" id="about">
+      <div class="halo-wrap halo-section-head">
+        <p class="halo-eyebrow">About</p>
+        <h2 class="halo-h2">Design that balances people, business and technology.</h2>
+        <p class="halo-lead">I'm a Principal Product Designer in Dhaka with <span data-start-year="2014">12+</span> years across AI, music, Islamic lifestyle, entertainment, fintech, healthtech, SaaS, e-commerce, OTT and telecom. Off the clock: motorcycles, movies, and an unreasonable curiosity about how things are made.</p>
+        <div class="halo-card-media halo-card-media--placeholder" style="aspect-ratio:16/9;max-width:44rem;">[PLACEHOLDER — real, well-lit portrait §20. No stock imagery §38]</div>
+      </div>
+    </section>
+
+    <!-- 9 · EXPERIENCE (§21) -->
+    <section class="halo-section">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Experience</p>
+          <h2 class="halo-h2">Where I've practiced.</h2>
+        </div>
+        <div class="halo-timeline halo-reveal">
+          <div class="halo-timeline-item"><span class="halo-timeline-period">[PERIOD — CONFIRM]</span><div><span class="halo-timeline-role">Principal Product Designer</span><br><span class="halo-timeline-org">[COMPANY / PRODUCT — CONFIRM §21]</span></div></div>
+          <div class="halo-timeline-item"><span class="halo-timeline-period">[PERIOD — CONFIRM]</span><div><span class="halo-timeline-role">[PREVIOUS ROLE — CONFIRM]</span><br><span class="halo-timeline-org">[COMPANY — CONFIRM]</span></div></div>
+          <div class="halo-timeline-item"><span class="halo-timeline-period">Telecom</span><div><span class="halo-timeline-role">Worked closely with product and digital teams at Grameenphone, Robi and Banglalink.</span><br><span class="halo-timeline-org">[CONFIRM exact nature of collaboration §4 — text names only; no operator logos without written permission]</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · PLAYGROUND (§22) -->
+    <section class="halo-section" id="playground">
+      <div class="halo-wrap">
+        <div class="halo-section-head">
+          <p class="halo-eyebrow">Playground</p>
+          <h2 class="halo-h2">Things I build when nobody asks me to.</h2>
+        </div>
+        <div class="halo-play-grid">
+          <a class="halo-play-item halo-reveal" href="#"><b class="halo-h3">[Experiment 01]</b><small class="halo-caption">[PLACEHOLDER — real UI/motion/AI experiment §22, §40]</small></a>
+          <a class="halo-play-item halo-reveal" href="#"><b class="halo-h3">[Experiment 02]</b><small class="halo-caption">[PLACEHOLDER]</small></a>
+          <a class="halo-play-item halo-reveal" href="#"><b class="halo-h3">[Experiment 03]</b><small class="halo-caption">[PLACEHOLDER]</small></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 · CONTACT (§23) -->
+    <section class="halo-section halo-contact" id="contact">
+      <div class="halo-wrap halo-section-head">
+        <p class="halo-eyebrow">Contact</p>
+        <h2 class="halo-display halo-reveal">Have a product worth <em>designing</em>?</h2>
+        <p class="halo-lead">Let's turn complex ideas into simple, meaningful experiences.</p>
+        <div class="halo-hero-cta halo-reveal">
+          <a class="halo-btn halo-btn--primary" href="#" title="[PLACEHOLDER — real contact email / form]">Start a conversation <svg class="halo-btn-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+        </div>
+        <p class="halo-caption">Or write directly: <strong>[PLACEHOLDER — real contact email]</strong> · [PLACEHOLDER: response-time expectation]</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12 · FOOTER (mirrors halo-footer.json, §24) -->
+  <footer class="halo-footer">
+    <div class="halo-wrap">
+      <div class="halo-footer-grid">
+        <div>
+          <a class="halo-brand" href="/preview/"><span class="halo-dot" aria-hidden="true"></span><span>Mehedi&nbsp;Hasan</span></a>
+          <p class="halo-caption">Principal Product Designer<br>Dhaka, Bangladesh</p>
+          <p class="halo-caption">Designed with curiosity. Built with intention.</p>
+        </div>
+        <nav aria-label="Footer"><ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#playground">Playground</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul></nav>
+        <div>
+          <p class="halo-caption">Elsewhere — [PLACEHOLDER: real social URLs only §23]</p>
+          <ul><li><a href="#" rel="me">LinkedIn</a></li><li><a href="#" rel="me">Behance</a></li><li><a href="#" rel="me">Dribbble</a></li></ul>
+        </div>
+      </div>
+      <div class="halo-footer-base">
+        <span>© <span data-halo-year>2026</span> Mehedi Hasan</span>
+        <span>Dhaka, Bangladesh</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/halo-theme.js" defer></script>
+  <script src="/assets/js/halo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* ==========================================================================
+   HALO.BD — Design Tokens
+   Mehedi Hasan · Principal Product Designer
+   --------------------------------------------------------------------------
+   Deliverable: Phase 2 (Design system), per Master Build Brief §9, §10, §29.
+
+   HOW TO USE (WordPress + Elementor):
+   1. Load this file BEFORE assets/css/halo-custom.css, site-wide
+      (child-theme enqueue, or a snippets plugin — see docs/05-qa-and-handoff.md).
+   2. Components NEVER reference raw hex values. They use the semantic
+      tokens below (--halo-bg, --halo-surface, --halo-text, --halo-text-muted,
+      --halo-border, --halo-accent, --halo-focus).
+   3. Light/dark theming is driven by [data-theme] on <html> and is set
+      before first paint by assets/js/halo-theme.js (no flash).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Palette primitives (PRIVATE — do not use in components)
+   Master Build Brief §9.
+   -------------------------------------------------------------------------- */
+:root {
+  --halo-c-black:      #0A0A0A;
+  --halo-c-slate:      #171A1D;
+  --halo-c-charcoal:   #25282B;
+  --halo-c-dark-gray:  #555A60;
+  --halo-c-gray:       #8A8F94;
+  --halo-c-light-gray: #E8E9EA;
+  --halo-c-off-white:  #F6F6F3;
+  --halo-c-white:      #FFFFFF;
+
+  /* Accent — [PLACEHOLDER — owner to confirm, Brief §9 "Accent color"].
+     Proposed: restrained cobalt. Measured contrast (WCAG):
+       #2545DB on #F6F6F3 = 6.57:1  (AAA for normal text)
+       #7D96FF on #0A0A0A = 7.24:1  (AAA for normal text) */
+  --halo-c-accent-light: #2545DB;
+  --halo-c-accent-dark:  #7D96FF;
+}
+
+/* --------------------------------------------------------------------------
+   2. Semantic tokens — LIGHT (default)
+   Muted text rule (Brief §9, measured): Dark Gray #555A60 in light mode
+   = 6.4:1 on Off White. Never reuse the same muted color across themes.
+   -------------------------------------------------------------------------- */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --halo-bg:            var(--halo-c-off-white);
+  --halo-surface:       var(--halo-c-white);
+  --halo-surface-2:     var(--halo-c-light-gray);
+  --halo-text:          var(--halo-c-black);
+  --halo-text-muted:    var(--halo-c-dark-gray);   /* 6.4:1 on bg */
+  --halo-border:        color-mix(in srgb, var(--halo-c-black) 12%, transparent);
+  --halo-border-strong: color-mix(in srgb, var(--halo-c-black) 24%, transparent);
+  --halo-accent:        var(--halo-c-accent-light);
+  --halo-accent-soft:   color-mix(in srgb, var(--halo-c-accent-light) 10%, transparent);
+  --halo-on-accent:     var(--halo-c-white);
+  --halo-focus:         var(--halo-c-accent-light);
+  --halo-scrim:         color-mix(in srgb, var(--halo-c-black) 55%, transparent);
+
+  --halo-shadow-sm: 0 1px 2px rgb(10 10 10 / 0.05);
+  --halo-shadow-md: 0 8px 24px -8px rgb(10 10 10 / 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   3. Semantic tokens — DARK
+   Muted text rule: Gray #8A8F94 in dark mode = 6.1:1 on Black.
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --halo-bg:            var(--halo-c-black);
+  --halo-surface:       var(--halo-c-slate);
+  --halo-surface-2:     var(--halo-c-charcoal);
+  --halo-text:          var(--halo-c-off-white);
+  --halo-text-muted:    var(--halo-c-gray);        /* 6.1:1 on bg */
+  --halo-border:        color-mix(in srgb, var(--halo-c-off-white) 14%, transparent);
+  --halo-border-strong: color-mix(in srgb, var(--halo-c-off-white) 28%, transparent);
+  --halo-accent:        var(--halo-c-accent-dark);
+  --halo-accent-soft:   color-mix(in srgb, var(--halo-c-accent-dark) 14%, transparent);
+  --halo-on-accent:     var(--halo-c-black);
+  --halo-focus:         var(--halo-c-accent-dark);
+  --halo-scrim:         color-mix(in srgb, var(--halo-c-black) 70%, transparent);
+
+  --halo-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
+  --halo-shadow-md: 0 8px 24px -8px rgb(0 0 0 / 0.6);
+}
+
+/* Honor the system theme only when no explicit choice is stored —
+   assets/js/halo-theme.js mirrors prefers-color-scheme into [data-theme]. */
+
+/* --------------------------------------------------------------------------
+   4. Spacing scale (px) — Brief §29
+   8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96 · 120 · 160
+   -------------------------------------------------------------------------- */
+:root {
+  --halo-space-2xs: 0.5rem;    /* 8   */
+  --halo-space-xs:  0.75rem;   /* 12  */
+  --halo-space-sm:  1rem;      /* 16  */
+  --halo-space-md:  1.5rem;    /* 24  */
+  --halo-space-lg:  2rem;      /* 32  */
+  --halo-space-xl:  3rem;      /* 48  */
+  --halo-space-2xl: 4rem;      /* 64  */
+  --halo-space-3xl: 5rem;      /* 80  */
+  --halo-space-4xl: 6rem;      /* 96  */
+  --halo-space-5xl: 7.5rem;    /* 120 */
+  --halo-space-6xl: 10rem;     /* 160 */
+
+  /* Layout */
+  --halo-container: 75rem;     /* 1200px content width */
+  --halo-gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --halo-section-block: clamp(var(--halo-space-3xl), 10vw, var(--halo-space-6xl));
+
+  /* Radii */
+  --halo-radius-sm: 0.375rem;
+  --halo-radius-md: 0.75rem;
+  --halo-radius-lg: 1rem;
+  --halo-radius-pill: 999px;
+
+  /* Motion — transform + opacity only (Brief §25) */
+  --halo-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --halo-dur-fast: 160ms;
+  --halo-dur: 280ms;
+  --halo-dur-slow: 520ms;
+}
+
+/* --------------------------------------------------------------------------
+   5. Type scale — Inter (body/UI) + Fraunces (display/editorial), Brief §8
+   Fluid (clamp) so desktop/tablet/mobile stay intentional, Brief §12.
+   -------------------------------------------------------------------------- */
+:root {
+  --halo-font-body: "Inter", var(--halo-font-fallback);
+  --halo-font-display: "Fraunces", var(--halo-font-fallback-serif);
+  --halo-font-fallback: "Inter Fallback", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --halo-font-fallback-serif: "Fraunces Fallback", Georgia, "Times New Roman", serif;
+
+  --halo-text-xs:   0.75rem;    /* 12 */
+  --halo-text-sm:   0.875rem;   /* 14 */
+  --halo-text-base: 1.0625rem;  /* 17 — comfortable editorial body */
+  --halo-text-lead: clamp(1.125rem, 0.6vw + 1rem, 1.375rem);
+  --halo-text-h3:  clamp(1.375rem, 1vw + 1rem, 1.875rem);
+  --halo-text-h2:  clamp(2rem, 2.2vw + 1.2rem, 3.25rem);
+  --halo-text-display: clamp(2.75rem, 6.5vw, 5.5rem);
+  --halo-text-eyebrow: 0.75rem;
+
+  --halo-lh-tight: 1.06;
+  --halo-lh-snug: 1.2;
+  --halo-lh-body: 1.65;
+
+  --halo-tracking-eyebrow: 0.14em;
+  --halo-tracking-display: -0.02em;
+}

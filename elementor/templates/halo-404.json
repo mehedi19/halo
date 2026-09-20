@@ -1,0 +1,68 @@
+{
+  "content": [
+    {
+      "id": "12b642e",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-hero"
+      },
+      "elements": [
+        {
+          "id": "10c28d1",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap halo-section-head"
+          },
+          "elements": [
+            {
+              "id": "08f3b5d",
+              "elType": "widget",
+              "settings": {
+                "html": "<p class=\"halo-eyebrow\">404</p>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "0ae76ba",
+              "elType": "widget",
+              "settings": {
+                "title": "This page took a wrong turn.",
+                "header_size": "h1",
+                "_css_classes": "halo-display"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "0cdb217",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p class=\"halo-lead\">The work is all at <a href=\"/work/\">/work</a> — or start again from the top.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "0eced74",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-hero-cta\"><a class=\"halo-btn halo-btn--primary\" href=\"/\">Back home <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a><a class=\"halo-btn halo-btn--ghost\" href=\"/work/\">See the work <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a></div>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "version": "0.4",
+  "title": "HALO — 404",
+  "type": "page"
+}

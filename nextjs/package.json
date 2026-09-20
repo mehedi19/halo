@@ -1,0 +1,22 @@
+{
+  "name": "halo-bd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HALO.BD — Mehedi Hasan, Principal Product Designer (Next.js build)",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "next": "^15.5.25",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
