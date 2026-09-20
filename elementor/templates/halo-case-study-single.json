@@ -1,0 +1,676 @@
+{
+  "content": [
+    {
+      "id": "139dae8",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-case-study"
+      },
+      "elements": [
+        {
+          "id": "11a9f8b",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "05f3b5d",
+              "elType": "widget",
+              "settings": {
+                "html": "<p class=\"halo-eyebrow\">[Industry · Platform — dynamic: post terms]</p>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "07e76ba",
+              "elType": "widget",
+              "settings": {
+                "title": "[Project title — dynamic: post title]",
+                "header_size": "h1",
+                "_css_classes": "halo-display"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "09db217",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p class=\"halo-lead\">[One-line project description — dynamic: post excerpt]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "0bced74",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-cs-meta\">\n        <div><p class=\"halo-eyebrow\">My role</p><p>[Lead Designer? CONFIRM — dynamic: ACF role]</p></div>\n        <div><p class=\"halo-eyebrow\">Timeline</p><p>[e.g. 2024–2026 — dynamic: ACF timeline]</p></div>\n        <div><p class=\"halo-eyebrow\">Platform</p><p>[Android / iOS / Web — dynamic: ACF platform]</p></div>\n        <div><p class=\"halo-eyebrow\">Team</p><p>[Team shape — dynamic: ACF team]</p></div>\n      </div>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "0dc28d1",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-cs-summary\"><p class=\"halo-eyebrow\">60-second summary</p><p><strong>Problem:</strong> [one line]</p><p><strong>My role:</strong> [one line]</p><p><strong>Team:</strong> [one line]</p><p><strong>Result:</strong> [verified outcome only — §17, §30]</p><hr><p class=\"halo-caption\"><strong>What I did:</strong> […] · <strong>What the team did:</strong> […] — ownership line per Brief §17.</p></div>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "0fb642e",
+              "elType": "widget",
+              "settings": {
+                "html": "<figure class=\"halo-figure halo-media\"><div class=\"halo-card-media halo-card-media--placeholder\"><p>[PLACEHOLDER — hero product screenshot/video loop. Owner supplies real, permission-cleared asset (Brief §30, §38).]</p></div><figcaption class=\"halo-caption\">[Caption — describe what the artifact shows]</figcaption></figure>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "1b6c85c",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "1978cff",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "1591645",
+              "elType": "widget",
+              "settings": {
+                "title": "Context",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "17851a2",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Context: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "233b5d0",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "2147a73",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "1d603b9",
+              "elType": "widget",
+              "settings": {
+                "title": "Problem",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "1f53f16",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Problem: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "2b0a344",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "29167e7",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "252f12d",
+              "elType": "widget",
+              "settings": {
+                "title": "Research",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "2722c8a",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Research: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "32d90b8",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "30e555b",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "2cfdea1",
+              "elType": "widget",
+              "settings": {
+                "title": "Strategy",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "2ef19fe",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Strategy: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "3aa7e2c",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "38b42cf",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "34ccc15",
+              "elType": "widget",
+              "settings": {
+                "title": "Information architecture",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "36c0772",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Information architecture: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "4276ba0",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "4083043",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "3c9b989",
+              "elType": "widget",
+              "settings": {
+                "title": "User journey",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "3e8f4e6",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — User journey: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "4a45914",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "4851db7",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "446a6fd",
+              "elType": "widget",
+              "settings": {
+                "title": "Wireframes",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "465e25a",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Wireframes: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "5214688",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "5020b2b",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "4c39471",
+              "elType": "widget",
+              "settings": {
+                "title": "UI design",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4e2cfce",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — UI design: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "59e33fc",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "57ef89f",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "54081e5",
+              "elType": "widget",
+              "settings": {
+                "title": "Interaction & micro-interactions",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "55fbd42",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Interaction & micro-interactions: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "61b2170",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "5fbe613",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "5bd6f59",
+              "elType": "widget",
+              "settings": {
+                "title": "Design system",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "5dcaab6",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Design system: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "6980ee4",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "678d387",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "63a5ccd",
+              "elType": "widget",
+              "settings": {
+                "title": "Challenges",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "659982a",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Challenges: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "714fc58",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "6f5c0fb",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "6b74a41",
+              "elType": "widget",
+              "settings": {
+                "title": "Solutions",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "6d6859e",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Solutions: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "791e9cc",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "772ae6f",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "73437b5",
+              "elType": "widget",
+              "settings": {
+                "title": "Outcome & impact",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "7537312",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Outcome & impact: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "80ed740",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-cs-prose"
+      },
+      "elements": [
+        {
+          "id": "7ef9be3",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "7b12529",
+              "elType": "widget",
+              "settings": {
+                "title": "Reflection",
+                "header_size": "h2",
+                "_css_classes": "halo-h3"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "7d06086",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>[SECTION — Reflection: add real content before publish (Brief §17, §30). Never invent research findings, outcomes, dates or metrics.]</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "86c8957",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-contact"
+      },
+      "elements": [
+        {
+          "id": "84d4dfa",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "82e129d",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-hero-cta\"><a class=\"halo-btn halo-btn--ghost\" href=\"/work/\">All work <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a><a class=\"halo-btn halo-btn--primary\" href=\"/contact/\">Start a conversation <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a></div>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "version": "0.4",
+  "title": "HALO — Case Study Single",
+  "type": "section"
+}

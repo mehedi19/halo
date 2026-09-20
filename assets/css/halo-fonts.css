@@ -1,0 +1,53 @@
+/* ==========================================================================
+   HALO.BD — Self-hosted fonts: Inter + Fraunces (variable)  ·  Brief §8
+   --------------------------------------------------------------------------
+   PRODUCTION: drop the variable .woff2 files into this folder (see
+   assets/fonts/README.md) OR upload them via Elementor → Custom Fonts.
+   font-display: swap + size-matched fallbacks reduce CLS.
+   Only the axes/weights actually used should be shipped:
+     Inter   : wght 400–700 (UI/body)
+     Fraunces: wght 400–600, opsz axis (display/editorial), italic for accents
+   ========================================================================== */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-var.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-var.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-italic-var.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Size-matched fallbacks (tuned against Inter/Fraunces metrics → low CLS) */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 1.06;
+  ascent-override: 0.90;
+  descent-override: 0.22;
+  line-gap-override: 0;
+}
+
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local("Georgia");
+  size-adjust: 1.04;
+  ascent-override: 0.95;
+  descent-override: 0.25;
+  line-gap-override: 0;
+}

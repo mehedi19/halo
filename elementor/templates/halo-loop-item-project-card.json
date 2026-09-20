@@ -1,0 +1,70 @@
+{
+  "content": [
+    {
+      "id": "10b642e",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-project-card",
+        "flex_direction": "column",
+        "flex_gap": {
+          "unit": "px",
+          "size": 16
+        }
+      },
+      "elements": [
+        {
+          "id": "06f3b5d",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"halo-card-media halo-card-media--placeholder\"><p>Swap: Featured Image widget, linked to post (4:3, object-fit cover). [PLACEHOLDER — project thumbnail. Owner supplies real, permission-cleared asset (Brief §30, §38).]</p></div>"
+          },
+          "elements": [],
+          "widgetType": "html"
+        },
+        {
+          "id": "08e76ba",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"halo-card-meta\"><p>Swap: post terms (industry)</p><p>Swap: ACF role · ACF period</p></div>"
+          },
+          "elements": [],
+          "widgetType": "html"
+        },
+        {
+          "id": "0adb217",
+          "elType": "widget",
+          "settings": {
+            "title": "Swap: Post Title (linked)",
+            "header_size": "h3",
+            "_css_classes": "halo-card-title halo-h3"
+          },
+          "elements": [],
+          "widgetType": "heading"
+        },
+        {
+          "id": "0cced74",
+          "elType": "widget",
+          "settings": {
+            "editor": "<p class=\"halo-text-muted\">Swap: Post excerpt / ACF outcome headline.</p>"
+          },
+          "elements": [],
+          "widgetType": "text-editor"
+        },
+        {
+          "id": "0ec28d1",
+          "elType": "widget",
+          "settings": {
+            "html": "<a class=\"halo-link-arrow\" href=\"#dynamic-post-url\">View case study <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>"
+          },
+          "elements": [],
+          "widgetType": "html"
+        }
+      ],
+      "isInner": true
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "HALO — Loop Item: Project Card",
+  "type": "section"
+}

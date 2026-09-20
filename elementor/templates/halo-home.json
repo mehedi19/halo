@@ -1,0 +1,1240 @@
+{
+  "content": [
+    {
+      "id": "10a9f8b",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-hero"
+      },
+      "elements": [
+        {
+          "id": "0eb642e",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "04f3b5d",
+              "elType": "widget",
+              "settings": {
+                "html": "<p class=\"halo-eyebrow\">Dhaka, Bangladesh</p>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "06e76ba",
+              "elType": "widget",
+              "settings": {
+                "title": "I design <em>products</em>, not just screens.",
+                "header_size": "h1",
+                "_css_classes": "halo-display"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "08db217",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p class=\"halo-lead\">I'm Mehedi Hasan — a Principal Product Designer. For <span data-start-year=\"2014\">12+</span> years I've helped teams turn complex ideas into simple, useful products across AI, music, fintech, entertainment, telecom and more.</p>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "0aced74",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-hero-cta\"><a class=\"halo-btn halo-btn--primary\" href=\"/work/\">Explore my work <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a><a class=\"halo-btn halo-btn--ghost\" href=\"/contact/\">Let's talk <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a></div>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "0cc28d1",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-hero-meta\"><span class=\"halo-status\">[PLACEHOLDER: availability, e.g. “Open to select projects” — CONFIRM §23]</span><span><span data-start-year=\"2014\">12+</span> years of experience</span><span>Previous: telecom, media & platform teams [PLACEHOLDER]</span></div>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "1e53f16",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-section--tight"
+      },
+      "elements": [
+        {
+          "id": "1c603b9",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "1878cff",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-stats",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 32
+                }
+              },
+              "elements": [
+                {
+                  "id": "129dae8",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<span class=\"halo-stat-value\"><span data-start-year=\"2014\">12+</span></span><span class=\"halo-stat-label\">years designing digital products</span>",
+                    "_css_classes": "halo-stat halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "1491645",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<span class=\"halo-stat-value\">1.5M+</span><span class=\"halo-stat-label\">installs — Shadhin Music, as of [PLACEHOLDER: month, year] §5</span>",
+                    "_css_classes": "halo-stat halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "16851a2",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<span class=\"halo-stat-value\">3</span><span class=\"halo-stat-label\">awards — Shadhin Music, as of [PLACEHOLDER: month, year] §5</span>",
+                    "_css_classes": "halo-stat halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "1a6c85c",
+              "elType": "widget",
+              "settings": {
+                "html": "<ul class=\"halo-domains\" aria-label=\"Industries\"><li>AI</li><li>Music</li><li>Islamic lifestyle</li><li>Entertainment</li><li>Fintech</li><li>Healthtech</li><li>E-commerce</li><li>SaaS</li><li>OTT</li><li>Telecom</li></ul>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "72437b5",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section",
+        "id": "work"
+      },
+      "elements": [
+        {
+          "id": "704fc58",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "2622c8a",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-section-head"
+              },
+              "elements": [
+                {
+                  "id": "2047a73",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<p class=\"halo-eyebrow\">Selected work</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "223b5d0",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Products I've helped shape.",
+                    "header_size": "h2",
+                    "_css_classes": "halo-h2"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "242f12d",
+                  "elType": "widget",
+                  "settings": {
+                    "editor": "<p class=\"halo-lead\">A few of the products and ecosystems I've designed with their teams. Four flagship case studies; more across fintech, healthtech, SaaS, e-commerce, OTT and telecom.</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "text-editor"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "6e5c0fb",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-work-grid",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [
+                {
+                  "id": "37b42cf",
+                  "elType": "container",
+                  "settings": {
+                    "_css_classes": "halo-project-card halo-reveal",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "unit": "px",
+                      "size": 16
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "2a0a344",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-media halo-card-media--placeholder"
+                      },
+                      "elements": [
+                        {
+                          "id": "28167e7",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>[PLACEHOLDER — OneAI product screenshots. Owner supplies real, permission-cleared asset (Brief §30, §38).]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "2fe555b",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-meta",
+                        "flex_direction": "row",
+                        "flex_justify_content": "space-between"
+                      },
+                      "elements": [
+                        {
+                          "id": "2bfdea1",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>AI · Platform</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        },
+                        {
+                          "id": "2df19fe",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>Role [PLACEHOLDER] · Period [PLACEHOLDER]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "31d90b8",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "OneAI",
+                        "header_size": "h3",
+                        "_css_classes": "halo-card-title halo-h3"
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    },
+                    {
+                      "id": "33ccc15",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p class=\"halo-text-muted\">All-in-one AI platform — a multi-model workspace that brings many AI workflows into one coherent product experience.</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "35c0772",
+                      "elType": "widget",
+                      "settings": {
+                        "html": "<a class=\"halo-link-arrow\" href=\"/work/oneai/\">View case study <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>"
+                      },
+                      "elements": [],
+                      "widgetType": "html"
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "4945914",
+                  "elType": "container",
+                  "settings": {
+                    "_css_classes": "halo-project-card halo-reveal",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "unit": "px",
+                      "size": 16
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "3b9b989",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-media halo-card-media--placeholder"
+                      },
+                      "elements": [
+                        {
+                          "id": "39a7e2c",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>[PLACEHOLDER — Shadhin Music product screenshots. Owner supplies real, permission-cleared asset (Brief §30, §38).]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "4176ba0",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-meta",
+                        "flex_direction": "row",
+                        "flex_justify_content": "space-between"
+                      },
+                      "elements": [
+                        {
+                          "id": "3d8f4e6",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>Music · Streaming</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        },
+                        {
+                          "id": "3f83043",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>Role [PLACEHOLDER] · Period [PLACEHOLDER]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "436a6fd",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "Shadhin Music",
+                        "header_size": "h3",
+                        "_css_classes": "halo-card-title halo-h3"
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    },
+                    {
+                      "id": "455e25a",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p class=\"halo-text-muted\">Music streaming and entertainment product. <strong>1.5M+ installs</strong> across Google Play & App Store and <strong>3 awards</strong> — as of [PLACEHOLDER: month, year] (Brief §5).</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "4751db7",
+                      "elType": "widget",
+                      "settings": {
+                        "html": "<a class=\"halo-link-arrow\" href=\"/work/shadhin-music/\">View case study <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>"
+                      },
+                      "elements": [],
+                      "widgetType": "html"
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "5ad6f59",
+                  "elType": "container",
+                  "settings": {
+                    "_css_classes": "halo-project-card halo-reveal",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "unit": "px",
+                      "size": 16
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "4d2cfce",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-media halo-card-media--placeholder"
+                      },
+                      "elements": [
+                        {
+                          "id": "4b39471",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>[PLACEHOLDER — Deen Islamic product screenshots. Owner supplies real, permission-cleared asset (Brief §30, §38).]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "53081e5",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-meta",
+                        "flex_direction": "row",
+                        "flex_justify_content": "space-between"
+                      },
+                      "elements": [
+                        {
+                          "id": "4f20b2b",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>Islamic lifestyle · Ecosystem</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        },
+                        {
+                          "id": "5114688",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>Role [PLACEHOLDER] · Period [PLACEHOLDER]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "54fbd42",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "Deen Islamic",
+                        "header_size": "h3",
+                        "_css_classes": "halo-card-title halo-h3"
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    },
+                    {
+                      "id": "56ef89f",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p class=\"halo-text-muted\">Islamic lifestyle and digital product ecosystem — everyday guidance brought into a calm, modern product experience.</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "58e33fc",
+                      "elType": "widget",
+                      "settings": {
+                        "html": "<a class=\"halo-link-arrow\" href=\"/work/deen-islamic/\">View case study <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>"
+                      },
+                      "elements": [],
+                      "widgetType": "html"
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "6c6859e",
+                  "elType": "container",
+                  "settings": {
+                    "_css_classes": "halo-project-card halo-reveal",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "unit": "px",
+                      "size": 16
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "5ebe613",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-media halo-card-media--placeholder"
+                      },
+                      "elements": [
+                        {
+                          "id": "5ccaab6",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>[PLACEHOLDER — WIN product screenshots. Owner supplies real, permission-cleared asset (Brief §30, §38).]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "649982a",
+                      "elType": "container",
+                      "settings": {
+                        "_css_classes": "halo-card-meta",
+                        "flex_direction": "row",
+                        "flex_justify_content": "space-between"
+                      },
+                      "elements": [
+                        {
+                          "id": "60b2170",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>Entertainment · Interactive</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        },
+                        {
+                          "id": "62a5ccd",
+                          "elType": "widget",
+                          "settings": {
+                            "editor": "<p>Role [PLACEHOLDER] · Period [PLACEHOLDER]</p>"
+                          },
+                          "elements": [],
+                          "widgetType": "text-editor"
+                        }
+                      ],
+                      "isInner": false
+                    },
+                    {
+                      "id": "668d387",
+                      "elType": "widget",
+                      "settings": {
+                        "title": "WIN",
+                        "header_size": "h3",
+                        "_css_classes": "halo-card-title halo-h3"
+                      },
+                      "elements": [],
+                      "widgetType": "heading"
+                    },
+                    {
+                      "id": "6880ee4",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p class=\"halo-text-muted\">Interactive entertainment and quiz product ecosystem built around play, retention and delight.</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "6a74a41",
+                      "elType": "widget",
+                      "settings": {
+                        "html": "<a class=\"halo-link-arrow\" href=\"/work/win/\">View case study <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>"
+                      },
+                      "elements": [],
+                      "widgetType": "html"
+                    }
+                  ],
+                  "isInner": true
+                }
+              ],
+              "isInner": false
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "8f8b228",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section"
+      },
+      "elements": [
+        {
+          "id": "8d976cb",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "7a12529",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-section-head"
+              },
+              "elements": [
+                {
+                  "id": "7437312",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<p class=\"halo-eyebrow\">Process</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "762ae6f",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Flexible, not formulaic.",
+                    "header_size": "h2",
+                    "_css_classes": "halo-h2"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "781e9cc",
+                  "elType": "widget",
+                  "settings": {
+                    "editor": "<p class=\"halo-lead\">Every product earns its own path, but the rhythm stays the same — and it loops. Shipping is the middle, not the end.</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "text-editor"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "8ba3b6e",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-process",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 24
+                }
+              },
+              "elements": [
+                {
+                  "id": "7c06086",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Understand",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "7df9be3",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Explore",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "7fed740",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Define",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "81e129d",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Design",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "83d4dfa",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Prototype",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "85c8957",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Test",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "87bc4b4",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Ship",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "89b0011",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Improve",
+                    "header_size": "h3",
+                    "_css_classes": "halo-step halo-h3 halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                }
+              ],
+              "isInner": false
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "aec67f8",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section",
+        "id": "expertise"
+      },
+      "elements": [
+        {
+          "id": "acd2c9b",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "9759f9c",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-section-head"
+              },
+              "elements": [
+                {
+                  "id": "917ed85",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<p class=\"halo-eyebrow\">Expertise</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "93728e2",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "What I'm trusted with.",
+                    "header_size": "h2",
+                    "_css_classes": "halo-h2"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "956643f",
+                  "elType": "widget",
+                  "settings": {
+                    "editor": "<p class=\"halo-lead\">Eight signature strengths at Principal level — each is proven inside the case studies, not just listed here.</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "text-editor"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "a8eb5e1",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-strengths",
+                "flex_wrap": "wrap"
+              },
+              "elements": [
+                {
+                  "id": "994daf9",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>Product strategy</b><small>Problem framing, scope and roadmap trade-offs</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "9b41656",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>User experience</b><small>Journeys, flows and information architecture</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "9d351b3",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>Interaction design</b><small>Behavior, states and micro-interactions</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "9f28d10",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>Design systems</b><small>Tokens, components and scalable patterns</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "a11c86d",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>Visual design</b><small>Typography, color, layout and motion</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "a3103ca",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>Prototyping</b><small>From quick tests to high-fidelity flows</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "a503f27",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>Design leadership</b><small>Reviews, mentoring, cross-functional work</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "a6f7a84",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b>AI-assisted workflows</b><small>Faster exploration, sharper decisions</small>",
+                    "_css_classes": "halo-strength halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "aadf13e",
+              "elType": "widget",
+              "settings": {
+                "html": "<p class=\"halo-eyebrow\" style=\"margin-top:48px;\">Tools & craft</p><div class=\"halo-tools\"><span class=\"halo-chip\">Figma</span><span class=\"halo-chip\">Framer</span><span class=\"halo-chip\">Lovable</span><span class=\"halo-chip\">Google Antigravity</span><span class=\"halo-chip\">Claude Code</span><span class=\"halo-chip\">HTML</span><span class=\"halo-chip\">CSS</span><span class=\"halo-chip\">WordPress</span><span class=\"halo-chip\">Elementor</span><span class=\"halo-chip\">Photoshop</span><span class=\"halo-chip\">Illustrator</span><span class=\"halo-chip\">After Effects</span><span class=\"halo-chip\">Premiere Pro</span></div>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "b8890c9",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section"
+      },
+      "elements": [
+        {
+          "id": "b69556c",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap halo-section-head"
+          },
+          "elements": [
+            {
+              "id": "b0ba355",
+              "elType": "widget",
+              "settings": {
+                "html": "<p class=\"halo-eyebrow\">AI + technology</p>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "b2adeb2",
+              "elType": "widget",
+              "settings": {
+                "title": "Designing beyond the canvas.",
+                "header_size": "h2",
+                "_css_classes": "halo-h2"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "b4a1a0f",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p class=\"halo-lead\">I use AI and modern build tools to move from idea to working prototype faster — to test interactions, validate concepts and speak the same language as engineering. I'm a product designer with strong technology fluency, not a full-time engineer.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "c43f4f7",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section"
+      },
+      "elements": [
+        {
+          "id": "c24b99a",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap halo-section-head"
+          },
+          "elements": [
+            {
+              "id": "ba7cc26",
+              "elType": "widget",
+              "settings": {
+                "html": "<p class=\"halo-eyebrow\">About</p>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            },
+            {
+              "id": "bc70783",
+              "elType": "widget",
+              "settings": {
+                "title": "Design that balances people, business and technology.",
+                "header_size": "h2",
+                "_css_classes": "halo-h2"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "be642e0",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p class=\"halo-lead\">I'm a Principal Product Designer in Dhaka with <span data-start-year=\"2014\">12+</span> years across AI, music, Islamic lifestyle, entertainment, fintech, healthtech, SaaS, e-commerce, OTT and telecom. Off the clock: motorcycles, movies, and an unreasonable curiosity about how things are made.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "c057e3d",
+              "elType": "widget",
+              "settings": {
+                "html": "<a class=\"halo-link-arrow\" href=\"/about/\">More about me <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "cff5925",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section"
+      },
+      "elements": [
+        {
+          "id": "ce01dc8",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "ca1a70e",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-section-head"
+              },
+              "elements": [
+                {
+                  "id": "c633054",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<p class=\"halo-eyebrow\">Experience</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "c826bb1",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Where I've practiced.",
+                    "header_size": "h2",
+                    "_css_classes": "halo-h2"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "cc0e26b",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-timeline\">\n        <div class=\"halo-timeline-item\"><span class=\"halo-timeline-period\">[PERIOD — CONFIRM]</span><div><span class=\"halo-timeline-role\">Principal Product Designer</span><br><span class=\"halo-timeline-org\">[COMPANY / PRODUCT — CONFIRM §21]</span></div></div>\n        <div class=\"halo-timeline-item\"><span class=\"halo-timeline-period\">[PERIOD — CONFIRM]</span><div><span class=\"halo-timeline-role\">[PREVIOUS ROLE — CONFIRM]</span><br><span class=\"halo-timeline-org\">[COMPANY — CONFIRM]</span></div></div>\n        <div class=\"halo-timeline-item\"><span class=\"halo-timeline-period\">Telecom</span><div><span class=\"halo-timeline-role\">Worked closely with product and digital teams at Grameenphone, Robi and Banglalink.</span><br><span class=\"halo-timeline-org\">[CONFIRM exact nature of collaboration — Brief §4. Text names only; no operator logos without written permission.]</span></div></div>\n      </div>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "e186f6a",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section"
+      },
+      "elements": [
+        {
+          "id": "df9340d",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap"
+          },
+          "elements": [
+            {
+              "id": "d5d0b3c",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-section-head"
+              },
+              "elements": [
+                {
+                  "id": "d1e9482",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<p class=\"halo-eyebrow\">Playground</p>"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "d3dcfdf",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Things I build when nobody asks me to.",
+                    "header_size": "h2",
+                    "_css_classes": "halo-h2"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "dd9f8b0",
+              "elType": "container",
+              "settings": {
+                "_css_classes": "halo-play-grid",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "unit": "px",
+                  "size": 24
+                }
+              },
+              "elements": [
+                {
+                  "id": "d7c4699",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b class=\"halo-h3\">[Experiment 01]</b><small class=\"halo-caption\">[PLACEHOLDER — real UI/motion/AI experiment per §22, §40]</small>",
+                    "_css_classes": "halo-play-item halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "d9b81f6",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b class=\"halo-h3\">[Experiment 02]</b><small class=\"halo-caption\">[PLACEHOLDER]</small>",
+                    "_css_classes": "halo-play-item halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                },
+                {
+                  "id": "dbabd53",
+                  "elType": "widget",
+                  "settings": {
+                    "html": "<b class=\"halo-h3\">[Experiment 03]</b><small class=\"halo-caption\">[PLACEHOLDER]</small>",
+                    "_css_classes": "halo-play-item halo-reveal"
+                  },
+                  "elements": [],
+                  "widgetType": "html"
+                }
+              ],
+              "isInner": false
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "eb4983b",
+      "elType": "container",
+      "settings": {
+        "_css_classes": "halo-section halo-contact"
+      },
+      "elements": [
+        {
+          "id": "e955cde",
+          "elType": "container",
+          "settings": {
+            "_css_classes": "halo-wrap halo-section-head"
+          },
+          "elements": [
+            {
+              "id": "e37aac7",
+              "elType": "widget",
+              "settings": {
+                "title": "Have a product worth <em>designing</em>?",
+                "header_size": "h2",
+                "_css_classes": "halo-display halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "e56e624",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p class=\"halo-lead\">Let's turn complex ideas into simple, meaningful experiences.</p>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "e762181",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class=\"halo-hero-cta\"><a class=\"halo-btn halo-btn--primary\" href=\"/contact/\">Start a conversation <svg class=\"halo-btn-arrow\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a></div><p class=\"halo-caption\">Or write directly: <strong>[PLACEHOLDER — real contact email only]</strong> · [PLACEHOLDER: response-time expectation, e.g. “I reply within two working days.”]</p>",
+                "_css_classes": "halo-reveal"
+              },
+              "elements": [],
+              "widgetType": "html"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "version": "0.4",
+  "title": "HALO — Home",
+  "type": "page"
+}
